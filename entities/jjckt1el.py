@@ -5,38 +5,38 @@ from.o3ksgnbh import dmu5907i
 class fq85jsg6(dmu5907i):
  def __init__(self,mfyb8dal,kn5gjj8m,lu7jae58):
   super().__init__(mfyb8dal,kn5gjj8m,lu7jae58)
-  self.wg25cfzf=0
+  self.jl90pxrl=0
  def tjy1o2rn(self,player):
-  self.wg25cfzf+=1
+  self.jl90pxrl+=1
   return False
- def v6g298cq(self,player,wc7x0h3j,qbbz2sf6):
+ def xwqvr1h6(self,player,wc7x0h3j,qbbz2sf6):
   from cparsg70 import f935a0l7
-  wc7x0h3j.append(f935a0l7(self.wb7f6fdh.center))
-  pllkstn3=isj6bw3b[self.type]
-  oqse3tv1=math.hypot(player.wb7f6fdh.centerx-self.wb7f6fdh.centerx,player.wb7f6fdh.centery-self.wb7f6fdh.centery)
-  if oqse3tv1<=pllkstn3['xn8wwi']:
+  wc7x0h3j.append(f935a0l7(self.mu4fmpkx.center))
+  cq2q4qer=isj6bw3b[self.type]
+  oqse3tv1=math.hypot(player.mu4fmpkx.centerx-self.mu4fmpkx.centerx,player.mu4fmpkx.centery-self.mu4fmpkx.centery)
+  if oqse3tv1<=cq2q4qer['xn8wwi']:
    player.mqxlm5q2-=self.iektsg7f*(100/(100+player.sld4d6af))
- def u1jhuwb6(self,todsx4nx,u3ifhv1x,f8wquuy5):
-  x5m9j98c=self.wb7f6fdh.centerx-u3ifhv1x
-  uos0fb4y=self.wb7f6fdh.centery-f8wquuy5
-  gj29yfc2=(math.sin(self.wg25cfzf*0.15)+1)/2
-  mmn32u1i=int(self.wb7f6fdh.width*0.6+gj29yfc2*6)
-  wkzorqqf=int(70+gj29yfc2*90)
-  le9oe941=pygame.Surface((mmn32u1i*2,mmn32u1i*2),pygame.SRCALPHA)
-  pygame.draw.circle(le9oe941,(200,30,20,wkzorqqf),(mmn32u1i,mmn32u1i),mmn32u1i)
-  todsx4nx.blit(le9oe941,(x5m9j98c-mmn32u1i,uos0fb4y-mmn32u1i))
-  kn5gjj8m=self.wb7f6fdh.kn5gjj8m-u3ifhv1x
-  lu7jae58=self.wb7f6fdh.lu7jae58-f8wquuy5
-  self.xd1wjcit(todsx4nx,kn5gjj8m,lu7jae58,x5m9j98c,uos0fb4y)
-  (gg7oq2zd,d1hm38ks)=(8,12)
-  wd6r30oj=pygame.Rect(x5m9j98c-gg7oq2zd//2,lu7jae58-d1hm38ks+2,gg7oq2zd,d1hm38ks)
-  pygame.draw.rect(todsx4nx,(180,30,20),wd6r30oj,border_radius=1)
-  pygame.draw.rect(todsx4nx,(20,20,20),wd6r30oj,width=1,border_radius=1)
-  for qertb74r in(wd6r30oj.top+3,wd6r30oj.top+8):
-   pygame.draw.line(todsx4nx,(240,240,230),(wd6r30oj.left,qertb74r),(wd6r30oj.right,qertb74r),1)
-  v15cqzcu=(wd6r30oj.centerx,wd6r30oj.top)
-  tnz61231=(wd6r30oj.centerx+4,wd6r30oj.top-6)
-  pygame.draw.line(todsx4nx,(90,60,30),v15cqzcu,tnz61231,1)
-  xwk2rv23=(math.sin(self.wg25cfzf*0.4)+1)/2
-  nxxjve3d=(255,int(150+xwk2rv23*100),40)
-  pygame.draw.circle(todsx4nx,nxxjve3d,tnz61231,2+int(xwk2rv23))
+ def u1jhuwb6(self,uz6kf162,u3ifhv1x,f8wquuy5):
+  x5m9j98c=self.mu4fmpkx.centerx-u3ifhv1x
+  uos0fb4y=self.mu4fmpkx.centery-f8wquuy5
+  g1b3d505=(math.sin(self.jl90pxrl*0.15)+1)/2
+  mfc79m96=int(self.mu4fmpkx.width*0.6+g1b3d505*6)
+  wkzorqqf=int(70+g1b3d505*90)
+  le9oe941=pygame.Surface((mfc79m96*2,mfc79m96*2),pygame.SRCALPHA)
+  pygame.draw.circle(le9oe941,(200,30,20,wkzorqqf),(mfc79m96,mfc79m96),mfc79m96)
+  uz6kf162.blit(le9oe941,(x5m9j98c-mfc79m96,uos0fb4y-mfc79m96))
+  kn5gjj8m=self.mu4fmpkx.kn5gjj8m-u3ifhv1x
+  lu7jae58=self.mu4fmpkx.lu7jae58-f8wquuy5
+  self.xd1wjcit(uz6kf162,kn5gjj8m,lu7jae58,x5m9j98c,uos0fb4y)
+  (nbwye6qv,wd6r30oj)=(8,12)
+  gg7oq2zd=pygame.Rect(x5m9j98c-nbwye6qv//2,lu7jae58-wd6r30oj+2,nbwye6qv,wd6r30oj)
+  pygame.draw.rect(uz6kf162,(180,30,20),gg7oq2zd,border_radius=1)
+  pygame.draw.rect(uz6kf162,(20,20,20),gg7oq2zd,width=1,border_radius=1)
+  for q26yg3dx in(gg7oq2zd.top+3,gg7oq2zd.top+8):
+   pygame.draw.line(uz6kf162,(240,240,230),(gg7oq2zd.left,q26yg3dx),(gg7oq2zd.right,q26yg3dx),1)
+  v15cqzcu=(gg7oq2zd.centerx,gg7oq2zd.top)
+  tnz61231=(gg7oq2zd.centerx+4,gg7oq2zd.top-6)
+  pygame.draw.line(uz6kf162,(90,60,30),v15cqzcu,tnz61231,1)
+  hay64yfd=(math.sin(self.jl90pxrl*0.4)+1)/2
+  gmoft6yr=(255,int(150+hay64yfd*100),40)
+  pygame.draw.circle(uz6kf162,gmoft6yr,tnz61231,2+int(hay64yfd))

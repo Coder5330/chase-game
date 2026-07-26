@@ -18,46 +18,46 @@ class oiqvnb4g(unittest.TestCase):
     used to write to entities.py's/bullets.py's own module namespace, not
     main.py's local run_game() variables -- so shake never actually fired.
     State now lives on `player` instead, which every attacker already has."""
- def xo2t8fy6(self):
+ def z5x8a5fb(self):
   player=rv86wzs3()
-  aicvqy5i=ugez7bh2('rqg433',player.wb7f6fdh.centerx,player.wb7f6fdh.centery)
+  aicvqy5i=ugez7bh2('rqg433',player.mu4fmpkx.centerx,player.mu4fmpkx.centery)
   aicvqy5i.iy6qktc8=0
-  self.assertFalse(player.vt26ys44)
+  self.assertFalse(player.v6xii5p5)
   aicvqy5i.t5wi6fqj(player)
-  self.assertTrue(player.vt26ys44)
-  self.assertEqual(player.rgdej31g,oohp6vz4)
- def gxlk8wru(self):
+  self.assertTrue(player.v6xii5p5)
+  self.assertEqual(player.ljk4q5v7,oohp6vz4)
+ def y9ayq6ww(self):
   player=rv86wzs3()
-  u8c2jwoc=rqf5q14j('jq85x7',player.wb7f6fdh.centerx,player.wb7f6fdh.centery,6,6,1,0)
-  self.assertFalse(player.vt26ys44)
+  u8c2jwoc=rqf5q14j('jq85x7',player.mu4fmpkx.centerx,player.mu4fmpkx.centery,6,6,1,0)
+  self.assertFalse(player.v6xii5p5)
   u8c2jwoc.t5wi6fqj([],[],[],player=player,target='player')
-  self.assertTrue(player.vt26ys44)
+  self.assertTrue(player.v6xii5p5)
 class ozp08j3t(unittest.TestCase):
- def qdnai89y(self):
+ def ysqg8x80(self):
   player=rv86wzs3()
-  bllo3rbx=m6fao72k(player.wb7f6fdh.kn5gjj8m,player.wb7f6fdh.lu7jae58,50)
+  bllo3rbx=m6fao72k(player.mu4fmpkx.kn5gjj8m,player.mu4fmpkx.lu7jae58,50)
   e9y3z2t4=player.frhzn4kg
-  bllo3rbx.k2ixivzk(player)
+  bllo3rbx.ub68rerv(player)
   self.assertTrue(bllo3rbx.f2sehe2a)
   self.assertEqual(player.frhzn4kg,e9y3z2t4+50)
 class vve92mpn(unittest.TestCase):
- def q3n2qb6g(self):
+ def qcd81twh(self):
   """Regression: the old return logic moved at a fixed world-space
         speed and composed movement before checking distance, so a player
         moving at a comparable speed could never actually be caught --
         the boomerang only ever 'died' when its lifetime ran out."""
   player=rv86wzs3()
-  nqimqodp=rqf5q14j('ptao1c',player.wb7f6fdh.centerx-250,player.wb7f6fdh.centery,20,27,1,0)
+  nqimqodp=rqf5q14j('ptao1c',player.mu4fmpkx.centerx-250,player.mu4fmpkx.centery,20,27,1,0)
   nqimqodp.ej16dvtj=True
   nqimqodp.clkqzfpq=nqimqodp.zefqjg02+1
-  co4busu9=None
-  for dw7nh8rq in range(nqimqodp.we4xyf9i):
-   player.wb7f6fdh.kn5gjj8m+=player.tj0nmeoq
-   nqimqodp.k2ixivzk(player)
+  ncyh3fvl=None
+  for dw7nh8rq in range(nqimqodp.ftlpq2wg):
+   player.mu4fmpkx.kn5gjj8m+=player.fd6rupw2
+   nqimqodp.ub68rerv(player)
    if nqimqodp.f2sehe2a:
-    co4busu9=dw7nh8rq
+    ncyh3fvl=dw7nh8rq
     break
-  self.assertIsNotNone(co4busu9,'boomerang never caught up to the player')
-  self.assertLess(co4busu9,nqimqodp.we4xyf9i-5,'boomerang only died from lifetime expiry, not from actually catching up')
+  self.assertIsNotNone(ncyh3fvl,'boomerang never caught up to the player')
+  self.assertLess(ncyh3fvl,nqimqodp.ftlpq2wg-5,'boomerang only died from lifetime expiry, not from actually catching up')
 if __name__=='__main__':
  unittest.main()
