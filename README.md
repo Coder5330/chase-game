@@ -52,3 +52,4 @@ meta-upgrade levels, highest level reached, and runs played.
 - `settings.py` — tunable constants, stat tables, and colors
 - `save_system.py` — save/load for the 3 save slots
 - `utils.py` — shared helpers (grid drawing, spawning, collisions)
+# test
