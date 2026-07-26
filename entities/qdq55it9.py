@@ -74,10 +74,10 @@ class zy0ifznb:
  def ls2zge2j(self,player,yuibrsz1,hfb85p86):
   pass
  def q7i6yuj7(self,hfb85p86):
+  if c8yfbntp[self.type].get('cym81c'):
+   return 1.0
   for v6g298cq in hfb85p86:
    if v6g298cq.ebt3g2qz:
-    continue
-   if v6g298cq is self:
     continue
    tby49e7e=c8yfbntp[v6g298cq.type]
    if not tby49e7e.get('cym81c'):
