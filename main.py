@@ -1,282 +1,282 @@
 import pygame
-from d0qzfhom import*
-from wigbiaf9 import*
+from ygm55ff1 import*
+from ffkxzuu8 import*
 from entities import*
-from nv23gxj0 import*
-from rserev36 import*
-from k7vcneas import sye0a4ab
-from rr9u1oe5 import yjluujmi,nyrid3dn,ls2zge2j,ibps3y70
-from az2ueaxy import n3rlkte4
+from cyrsvzn4 import*
+from py55p1v3 import*
+from prfio878 import nxxjve3d
+from csn2s8nn import ftlpq2wg,exvaj2k8,xsspye9r,n2vlpys2
+from odsgv6to import la3kkrzd
 pygame.init()
-je11e9ft=pygame.display.set_mode((khl1n13j,pi3qk2ia))
-am2vajep=pygame.time.Clock()
-def giec4d14(je11e9ft,semqgy27,azebbk7w=120,vpbwhvnz=10):
- chx3d43e=pygame.Surface((semqgy27.width,semqgy27.height),pygame.SRCALPHA)
- pygame.draw.rect(chx3d43e,(255,255,255,azebbk7w),chx3d43e.get_rect(),border_radius=vpbwhvnz)
- je11e9ft.blit(chx3d43e,semqgy27.topleft)
-def zmybd2qe():
+uj64qhks=pygame.display.set_mode((qxaprpn6,ibps3y70))
+uww5wfcp=pygame.time.Clock()
+def wi8skch8(uj64qhks,zdan085r,dtx63cfl=120,y8bv78hu=10):
+ nbwye6qv=pygame.Surface((zdan085r.width,zdan085r.height),pygame.SRCALPHA)
+ pygame.draw.rect(nbwye6qv,(255,255,255,dtx63cfl),nbwye6qv.get_rect(),border_radius=y8bv78hu)
+ uj64qhks.blit(nbwye6qv,zdan085r.topleft)
+def he9p3jpx():
  title_font=pygame.font.SysFont('arial',40,bold=True)
- k7zgf9q5=pygame.font.SysFont('arial',16)
- sne6loh2=pygame.font.SysFont('arial',22,bold=True)
- d1b3jczu=pygame.font.SysFont('arial',15)
- lt63j3r3=[]
- for elwf90km in range(1,ibps3y70+1):
-  mnwxuj3a=ls2zge2j(elwf90km)
-  if mnwxuj3a:
-   subtitle=f"Level {mnwxuj3a['high_level']}  |  {mnwxuj3a['resources']} resources  |  {mnwxuj3a['runs_played']} runs"
+ yrivh6t1=pygame.font.SysFont('arial',16)
+ tp2ex5t5=pygame.font.SysFont('arial',22,bold=True)
+ yg87oi0e=pygame.font.SysFont('arial',15)
+ nqimqodp=[]
+ for mc8qizk3 in range(1,n2vlpys2+1):
+  gg7oq2zd=xsspye9r(mc8qizk3)
+  if gg7oq2zd:
+   subtitle=f"Level {gg7oq2zd['high_level']}  |  {gg7oq2zd['resources']} resources  |  {gg7oq2zd['runs_played']} runs"
   else:
    subtitle='Empty - New Game'
-  t5wi6fqj=q7vren93(khl1n13j//2-170,170+(elwf90km-1)*110,340,90,uqjiujv6,aye511mk,mn9er14f,f2pcn9t8,sne6loh2,f'Slot {elwf90km}',12,subtitle=subtitle,sub_font=d1b3jczu,kind='slot',key=elwf90km)
-  lt63j3r3.append(t5wi6fqj)
+  uva2ieuc=hc58drc1(qxaprpn6//2-170,170+(mc8qizk3-1)*110,340,90,mn9er14f,fq85jsg6,f2pcn9t8,aye511mk,tp2ex5t5,f'Slot {mc8qizk3}',12,subtitle=subtitle,sub_font=yg87oi0e,kind='slot',key=mc8qizk3)
+  nqimqodp.append(uva2ieuc)
  while True:
-  hugysm8t=pygame.event.get()
-  for pvasifpw in hugysm8t:
-   if pvasifpw.type==pygame.QUIT:
+  qbbz2sf6=pygame.event.get()
+  for do2m71hs in qbbz2sf6:
+   if do2m71hs.type==pygame.QUIT:
     return None
-  for t5wi6fqj in lt63j3r3:
-   t5wi6fqj.update(hugysm8t)
-   if t5wi6fqj.i4fejgxa:
-    return t5wi6fqj.key
-  je11e9ft.fill(bom5igqp['ukshy8'])
-  wg25cfzf=title_font.render('CHASE GAME',True,(20,20,40))
-  je11e9ft.blit(wg25cfzf,(khl1n13j//2-wg25cfzf.get_width()//2,70))
-  hfb85p86=k7zgf9q5.render('Choose a save slot',True,(30,30,30))
-  je11e9ft.blit(hfb85p86,(khl1n13j//2-hfb85p86.get_width()//2,135))
-  for t5wi6fqj in lt63j3r3:
-   t5wi6fqj.llxxezdu(je11e9ft)
+  for uva2ieuc in nqimqodp:
+   uva2ieuc.update(qbbz2sf6)
+   if uva2ieuc.f8wquuy5:
+    return uva2ieuc.key
+  uj64qhks.fill(iq5c34dx['uonjpi'])
+  y9ayq6ww=title_font.render('CHASE GAME',True,(20,20,40))
+  uj64qhks.blit(y9ayq6ww,(qxaprpn6//2-y9ayq6ww.get_width()//2,70))
+  g5l8a78e=yrivh6t1.render('Choose a save slot',True,(30,30,30))
+  uj64qhks.blit(g5l8a78e,(qxaprpn6//2-g5l8a78e.get_width()//2,135))
+  for uva2ieuc in nqimqodp:
+   uva2ieuc.izhwy9he(uj64qhks)
   pygame.display.flip()
-  am2vajep.tick(f935a0l7)
-def xd8wz42o(pcvsqame):
- uos0fb4y=pygame.font.SysFont('arial',28)
- k44nlz15=pygame.font.SysFont('arial',48)
- d1b3jczu=pygame.font.SysFont('arial',16)
+  uww5wfcp.tick(gokc1msy)
+def vyb6li07(vhxs58yr):
+ rzewviyt=pygame.font.SysFont('arial',28)
+ on0jnwny=pygame.font.SysFont('arial',48)
+ yg87oi0e=pygame.font.SysFont('arial',16)
  title_font=pygame.font.SysFont('arial',20,bold=True)
- kkzruin3=pygame.font.SysFont('arial',24,bold=True)
- sne6loh2=pygame.font.SysFont('arial',22,bold=True)
- player=wa11dpg8(meta_upgrades=pcvsqame.get('meta_upgrades',{}))
- dzsedfqs=[]
- yx4w6xlp=[]
- mn7h9g1a=[]
- lcj883dh=[]
- sv5f1bcp=[]
- ugez7bh2=[]
- wy0mahym=[k1wj0tpa[0]]
- zdan085r=['fd6rup']
- player.y8dd2255['fd6rup']=1
- iie0rnuj=False
- vmxb9yo1=player.jqxs6esj
- nd31k9qm=0
- ee1g983e=dxmo5bxx*f935a0l7
- j1i2hgj1=dict(uyhl1c32)
- u9el8hl8=None
+ tb4ldims=pygame.font.SysFont('arial',24,bold=True)
+ tp2ex5t5=pygame.font.SysFont('arial',22,bold=True)
+ player=yswjckjl(meta_upgrades=vhxs58yr.get('meta_upgrades',{}))
+ hfb85p86=[]
+ ejwtl9tq=[]
+ vk3g84ut=[]
+ divsolml=[]
+ gn89qkns=[]
+ yuibrsz1=[]
+ xo2t8fy6=[bl6246hi[0]]
+ z5x8a5fb=['w0hod7']
+ player.l3m25a5p['w0hod7']=1
+ mygfliji=False
+ fdxj37c9=player.zpajssuu
+ lgbpj4uf=0
+ p7b1ijiy=bom5igqp*gokc1msy
+ mpdzp6lf=dict(mjh75lxo)
+ gqq4d3kz=None
  while True:
-  hugysm8t=pygame.event.get()
-  for pvasifpw in hugysm8t:
-   if pvasifpw.type==pygame.QUIT:
-    return(nd31k9qm,player.jqxs6esj,True)
-   if iie0rnuj and pvasifpw.type==pygame.KEYDOWN and(pvasifpw.key in(pygame.K_RETURN,pygame.K_SPACE)):
-    return(nd31k9qm,player.jqxs6esj,False)
-  e5x4w7ky=False
-  if not player.oc4kl8cg and(not iie0rnuj):
-   for gp84dyt9 in lcj883dh[:]:
-    sl65wvjx=gp84dyt9.update(player)
-    if sl65wvjx:
-     e5x4w7ky=True
-    if gp84dyt9.sf337kuu:
-     rktlzkj4=random.randint(uccblskr,oeimvihc)
-     nd31k9qm+=rktlzkj4
-     for y38daly8 in range(10):
-      mn7h9g1a.append(nii6l3ue([bom5igqp['xiymen'],bom5igqp['mpvyio']],2,4,-3,3,gp84dyt9.semqgy27.centerx,gp84dyt9.semqgy27.centery,life=30))
-     lcj883dh.remove(gp84dyt9)
-   ee1g983e-=1
-   if ee1g983e<=0:
-    ee1g983e=dxmo5bxx*f935a0l7
-    if len(lcj883dh)<yex8fsv8:
-     lcj883dh.append(sye0a4ab(player))
-   if not e5x4w7ky:
-    for ncyh3fvl in zdan085r:
-     j1i2hgj1[ncyh3fvl]-=1
-     if j1i2hgj1[ncyh3fvl]<=0:
-      njxurgow=player.y8dd2255.get(ncyh3fvl,1)
-      wkof8krd=uyhl1c32[ncyh3fvl]*player.duhxid4n*x6cnoljq(njxurgow)
-      j1i2hgj1[ncyh3fvl]=max(4,int(wkof8krd))
-      mctwjlsh=mjh75lxo[ncyh3fvl]['jyjhu8']
-      i0x65muf=player.mal2w37d*a2wspofv(njxurgow)
-      yx4w6xlp.append(qqu7eeqt(ncyh3fvl,player.semqgy27.centerx-mctwjlsh//2,player.semqgy27.centery-mctwjlsh//2,mctwjlsh,mctwjlsh,player.uidlrye8['qhgcso'],player.uidlrye8['rom5xl'],i0x65muf))
-   crsb4gf1=min(d60fkhmy,zxa3kx7e*(1+0.12*(player.jqxs6esj-1)))
-   if random.random()<crsb4gf1:
-    lnf74t60(dzsedfqs,wy0mahym)
-   player.s4rxyj38()
-   if player.jqxs6esj>vmxb9yo1:
-    if player.jqxs6esj<=len(k1wj0tpa):
-     tw76xato=k1wj0tpa[player.jqxs6esj-1]
-     if tw76xato not in wy0mahym:
-      wy0mahym.append(tw76xato)
-    vmxb9yo1=player.jqxs6esj
-   if player.vw6m7b5c<=0:
-    iie0rnuj=True
-   for li9nb74x in dzsedfqs:
-    li9nb74x.s4rxyj38(player)
-    for faqvkizz in li9nb74x.ocij2v2h:
-     faqvkizz.s4rxyj38(player)
-     faqvkizz.x37pqkoj(dzsedfqs,mn7h9g1a,yx4w6xlp,player=player,target='player')
-    li9nb74x.ocij2v2h=[gmjkv5us for gmjkv5us in li9nb74x.ocij2v2h if not gmjkv5us.uww5wfcp]
-   for c0hpmnz1 in sv5f1bcp:
-    c0hpmnz1.s4rxyj38(player)
-   for ia529603 in yx4w6xlp:
-    ia529603.s4rxyj38(player,izhwy9he(dzsedfqs,ia529603))
-    ia529603.x37pqkoj(dzsedfqs,mn7h9g1a,yx4w6xlp)
-   for a8lw2lm3 in mn7h9g1a[:]:
-    a8lw2lm3['hsm5rr']+=a8lw2lm3['qhgcso']
-    a8lw2lm3['ihgnze']+=a8lw2lm3['rom5xl']
-    a8lw2lm3['razc0b']-=1
-    if a8lw2lm3['razc0b']<=0:
-     mn7h9g1a.remove(a8lw2lm3)
-   for z9toqw9j in ugez7bh2[:]:
-    z9toqw9j.update()
-    if z9toqw9j.uww5wfcp():
-     ugez7bh2.remove(z9toqw9j)
-  if player.oc4kl8cg and(not iie0rnuj):
-   if u9el8hl8==None:
-    mytn02yc=[]
-    for wydmt8vt in mjh75lxo:
-     if wydmt8vt=='iv7zzj':
+  qbbz2sf6=pygame.event.get()
+  for do2m71hs in qbbz2sf6:
+   if do2m71hs.type==pygame.QUIT:
+    return(lgbpj4uf,player.zpajssuu,True)
+   if mygfliji and do2m71hs.type==pygame.KEYDOWN and(do2m71hs.key in(pygame.K_RETURN,pygame.K_SPACE)):
+    return(lgbpj4uf,player.zpajssuu,False)
+  vvslh9bh=False
+  if not player.n64fgwje and(not mygfliji):
+   for mal2w37d in divsolml[:]:
+    azc4xl99=mal2w37d.update(player)
+    if azc4xl99:
+     vvslh9bh=True
+    if mal2w37d.crsb4gf1:
+     co4busu9=random.randint(re7ur23g,uccblskr)
+     lgbpj4uf+=co4busu9
+     for gdzr1yxr in range(10):
+      vk3g84ut.append(gmoft6yr([iq5c34dx['lwr965'],iq5c34dx['myllwb']],2,4,-3,3,mal2w37d.zdan085r.centerx,mal2w37d.zdan085r.centery,life=30))
+     divsolml.remove(mal2w37d)
+   p7b1ijiy-=1
+   if p7b1ijiy<=0:
+    p7b1ijiy=bom5igqp*gokc1msy
+    if len(divsolml)<r1yzoyn6:
+     divsolml.append(nxxjve3d(player))
+   if not vvslh9bh:
+    for q6nqqb9l in z5x8a5fb:
+     mpdzp6lf[q6nqqb9l]-=1
+     if mpdzp6lf[q6nqqb9l]<=0:
+      hcxhgnze=player.l3m25a5p.get(q6nqqb9l,1)
+      sv5f1bcp=mjh75lxo[q6nqqb9l]*player.uysal8m1*w8wj0uun(hcxhgnze)
+      mpdzp6lf[q6nqqb9l]=max(4,int(sv5f1bcp))
+      g1g1r1dw=uqjiujv6[q6nqqb9l]['mxhw0i']
+      uos0fb4y=player.d1ieixwc*mnx4sn6s(hcxhgnze)
+      ejwtl9tq.append(rcfnfhol(q6nqqb9l,player.zdan085r.centerx-g1g1r1dw//2,player.zdan085r.centery-g1g1r1dw//2,g1g1r1dw,g1g1r1dw,player.u9el8hl8['l2cwt0'],player.u9el8hl8['jchsdi'],uos0fb4y))
+   npejzhya=min(k1wj0tpa,isj6bw3b*(1+0.12*(player.zpajssuu-1)))
+   if random.random()<npejzhya:
+    xwk2rv23(hfb85p86,xo2t8fy6)
+   player.o4dd1vn8()
+   if player.zpajssuu>fdxj37c9:
+    if player.zpajssuu<=len(bl6246hi):
+     q5amln4p=bl6246hi[player.zpajssuu-1]
+     if q5amln4p not in xo2t8fy6:
+      xo2t8fy6.append(q5amln4p)
+    fdxj37c9=player.zpajssuu
+   if player.qhkc856w<=0:
+    mygfliji=True
+   for pa8s8hmb in hfb85p86:
+    pa8s8hmb.o4dd1vn8(player)
+    for v83tqll8 in pa8s8hmb.t1w1ht7p:
+     v83tqll8.o4dd1vn8(player)
+     v83tqll8.nd96qe3r(hfb85p86,vk3g84ut,ejwtl9tq,player=player,target='player')
+    pa8s8hmb.t1w1ht7p=[pecruyf3 for pecruyf3 in pa8s8hmb.t1w1ht7p if not pecruyf3.ebt3g2qz]
+   for tk0qtl3q in gn89qkns:
+    tk0qtl3q.o4dd1vn8(player)
+   for b06xkxb9 in ejwtl9tq:
+    b06xkxb9.o4dd1vn8(player,yjluujmi(hfb85p86,b06xkxb9))
+    b06xkxb9.nd96qe3r(hfb85p86,vk3g84ut,ejwtl9tq)
+   for mcup8ijl in vk3g84ut[:]:
+    mcup8ijl['huplvq']+=mcup8ijl['l2cwt0']
+    mcup8ijl['jy66p6']+=mcup8ijl['jchsdi']
+    mcup8ijl['cuuhcl']-=1
+    if mcup8ijl['cuuhcl']<=0:
+     vk3g84ut.remove(mcup8ijl)
+   for elwf90km in yuibrsz1[:]:
+    elwf90km.update()
+    if elwf90km.ebt3g2qz():
+     yuibrsz1.remove(elwf90km)
+  if player.n64fgwje and(not mygfliji):
+   if gqq4d3kz==None:
+    sye0a4ab=[]
+    for su1hbj6t in uqjiujv6:
+     if su1hbj6t=='fds22w':
       continue
-     if wydmt8vt not in zdan085r:
-      mytn02yc.append(('lb1iji',wydmt8vt))
-    for wydmt8vt in zdan085r:
-     if player.y8dd2255.get(wydmt8vt,1)<mvxdp5gj:
-      mytn02yc.append(('i4jtgx',wydmt8vt))
-    for vt6om1fb in z0xkxwd8:
-     if player.wb7f6fdh.get(vt6om1fb,0)<z0xkxwd8[vt6om1fb]['j1poxr']:
-      mytn02yc.append(('k5qmkt',vt6om1fb))
-    if not mytn02yc:
-     player.oc4kl8cg=False
+     if su1hbj6t not in z5x8a5fb:
+      sye0a4ab.append(('h7kr0a',su1hbj6t))
+    for su1hbj6t in z5x8a5fb:
+     if player.l3m25a5p.get(su1hbj6t,1)<vve92mpn:
+      sye0a4ab.append(('r8imoe',su1hbj6t))
+    for m20u9isy in qqu7eeqt:
+     if player.jyjhu8my.get(m20u9isy,0)<qqu7eeqt[m20u9isy]['txb3n2']:
+      sye0a4ab.append(('ceb875',m20u9isy))
+    if not sye0a4ab:
+     player.n64fgwje=False
     else:
-     random.shuffle(mytn02yc)
-     ytv3i12v=mytn02yc[:3]
-     x03uvule=120*len(ytv3i12v)+20
-     u9el8hl8=hyihair4(400,x03uvule+hyihair4.zy0ifznb,gncxll4z,title='LEVEL UP! Choose an upgrade',title_font=kkzruin3)
-     iy6qktc8=x03uvule//len(ytv3i12v)
-     l57p6bkl=u9el8hl8.semqgy27.cknfu84x+u9el8hl8.iektsg7f
-     for(elwf90km,(kind,key))in enumerate(ytv3i12v):
-      if kind=='lb1iji':
-       title=f'NEW WEAPON: {vxvg0fn9[key]}'
+     random.shuffle(sye0a4ab)
+     u3ifhv1x=sye0a4ab[:3]
+     llxxezdu=120*len(u3ifhv1x)+20
+     gqq4d3kz=rv86wzs3(400,llxxezdu+rv86wzs3.tp0lvsnu,z0xkxwd8,title='LEVEL UP! Choose an upgrade',title_font=tb4ldims)
+     ytv3i12v=llxxezdu//len(u3ifhv1x)
+     u23y30ys=gqq4d3kz.zdan085r.tjy1o2rn+gqq4d3kz.xuu13i59
+     for(mc8qizk3,(kind,key))in enumerate(u3ifhv1x):
+      if kind=='h7kr0a':
+       title=f'NEW WEAPON: {uyhl1c32[key]}'
        subtitle='Unlock this weapon'
-      elif kind=='i4jtgx':
-       velos6zl=player.y8dd2255.get(key,1)
-       title=f'{vxvg0fn9[key]}  Lv.{velos6zl} -> {velos6zl + 1}'
+      elif kind=='r8imoe':
+       vpbwhvnz=player.l3m25a5p.get(key,1)
+       title=f'{uyhl1c32[key]}  Lv.{vpbwhvnz} -> {vpbwhvnz + 1}'
        subtitle='+12% damage, faster cooldown'
       else:
-       velos6zl=player.wb7f6fdh.get(key,0)
-       title=f"{z0xkxwd8[key]['nnwpay']}  Lv.{velos6zl} -> {velos6zl + 1}"
-       subtitle=z0xkxwd8[key]['vk2tcz']
-      t5wi6fqj=q7vren93(u9el8hl8.semqgy27.gp6orsnc+12,l57p6bkl+elwf90km*iy6qktc8+6,u9el8hl8.semqgy27.width-24,iy6qktc8-12,uqjiujv6,aye511mk,mn9er14f,f2pcn9t8,sne6loh2,title,12,subtitle=subtitle,sub_font=d1b3jczu,kind=kind,key=key)
-      u9el8hl8.add(t5wi6fqj)
-   if u9el8hl8 is not None:
-    for f32ejx5t in u9el8hl8.wehlxslg:
-     f32ejx5t.update(hugysm8t)
-     if f32ejx5t.i4fejgxa:
-      if f32ejx5t.kind=='lb1iji':
-       zdan085r.append(f32ejx5t.key)
-       player.y8dd2255[f32ejx5t.key]=1
-       j1i2hgj1[f32ejx5t.key]=uyhl1c32[f32ejx5t.key]
-      elif f32ejx5t.kind=='i4jtgx':
-       player.sygvwopl(f32ejx5t.key)
-      elif f32ejx5t.kind=='k5qmkt':
-       player.mqp49kwv(f32ejx5t.key)
-      player.oc4kl8cg=False
-      u9el8hl8=None
-  i13n3bzt(dzsedfqs)
-  (dzsedfqs,yx4w6xlp,sv5f1bcp)=arhnuxor(dzsedfqs,yx4w6xlp,sv5f1bcp,player,ugez7bh2)
-  v982n2at=player.semqgy27.gp6orsnc-khl1n13j//2
-  on0jnwny=player.semqgy27.cknfu84x-pi3qk2ia//2
-  v982n2at=max(min(v982n2at,b18hafey-khl1n13j),0)
-  on0jnwny=max(min(on0jnwny,cq0b8ic8-pi3qk2ia),0)
-  q5amln4p=ry181acj=0
-  if player.wa45hvgo:
-   player.ub68rerv-=1
-   q5amln4p=random.randint(-rqf5q14j,rqf5q14j)
-   ry181acj=random.randint(-rqf5q14j,rqf5q14j)
-   v982n2at+=q5amln4p
-   on0jnwny+=ry181acj
-   if player.ub68rerv<=0:
-    player.wa45hvgo=False
-  je11e9ft.fill(bom5igqp['ukshy8'])
-  u23y30ys(je11e9ft,v982n2at,on0jnwny)
-  for gp84dyt9 in lcj883dh:
-   gp84dyt9.llxxezdu(je11e9ft,v982n2at,on0jnwny)
-  player.llxxezdu(je11e9ft,v982n2at,on0jnwny)
-  for li9nb74x in dzsedfqs:
-   li9nb74x.llxxezdu(je11e9ft,v982n2at,on0jnwny)
-   for faqvkizz in li9nb74x.ocij2v2h:
-    faqvkizz.llxxezdu(je11e9ft,v982n2at,on0jnwny)
-  for ia529603 in yx4w6xlp:
-   ia529603.llxxezdu(je11e9ft,v982n2at,on0jnwny)
-  for c0hpmnz1 in sv5f1bcp:
-   c0hpmnz1.llxxezdu(je11e9ft,v982n2at,on0jnwny)
-  for a8lw2lm3 in mn7h9g1a:
-   pygame.draw.circle(je11e9ft,a8lw2lm3['gj29yf'],(int(a8lw2lm3['hsm5rr']-v982n2at),int(a8lw2lm3['ihgnze']-on0jnwny)),a8lw2lm3['jyjhu8'])
-  for z9toqw9j in ugez7bh2:
-   z9toqw9j.llxxezdu(je11e9ft,v982n2at,on0jnwny)
-  if u9el8hl8!=None:
-   u9el8hl8.llxxezdu(je11e9ft)
-  jl90pxrl=40+18*len(zdan085r)
-  giec4d14(je11e9ft,pygame.Rect(12,12,190,jl90pxrl))
-  chx3d43e=uos0fb4y.render(f'Enemies: {len(dzsedfqs)}',True,(20,20,20))
-  je11e9ft.blit(chx3d43e,(20+q5amln4p,20+ry181acj))
-  vyb6li07=50
-  for wydmt8vt in zdan085r:
-   velos6zl=player.y8dd2255.get(wydmt8vt,1)
-   m3pt5r5r=d1b3jczu.render(f'{vxvg0fn9[wydmt8vt]} Lv.{velos6zl}',True,(30,30,30))
-   je11e9ft.blit(m3pt5r5r,(20+q5amln4p,vyb6li07+ry181acj))
-   vyb6li07+=18
-  giec4d14(je11e9ft,pygame.Rect(khl1n13j-180,12,168,32))
-  rk2u1rsu=d1b3jczu.render(f'Resources: {nd31k9qm}',True,(20,20,20))
-  je11e9ft.blit(rk2u1rsu,(khl1n13j-170+q5amln4p,20+ry181acj))
-  if e5x4w7ky:
-   co4busu9=d1b3jczu.render('Opening chest... weapons offline!',True,bom5igqp['baj1g1'])
-   je11e9ft.blit(co4busu9,(khl1n13j//2-co4busu9.get_width()//2+q5amln4p,12+ry181acj))
-  giec4d14(je11e9ft,pygame.Rect(12,pi3qk2ia-50,388,38))
-  zefqjg02=title_font.render(f'Lv.{player.jqxs6esj}',True,(20,20,20))
-  je11e9ft.blit(zefqjg02,(20+q5amln4p,pi3qk2ia-40+ry181acj))
-  l3swebnv=s8qjnv8z[min(player.jqxs6esj,len(s8qjnv8z)-1)]
-  f8rtm4j3=min(1.0,player.zflse45b/l3swebnv)
-  uysal8m1(je11e9ft,90,pi3qk2ia-34,290,f8rtm4j3,height=16,fg=bom5igqp['xiymen'],bg=(70,70,70))
-  if iie0rnuj:
-   m20u9isy=pygame.Surface((khl1n13j,pi3qk2ia),pygame.SRCALPHA)
-   m20u9isy.fill((0,0,0,150))
-   je11e9ft.blit(m20u9isy,(0,0))
-   chx3d43e=k44nlz15.render('GAME OVER',True,bom5igqp['fsqrf1'])
-   o4dd1vn8=k44nlz15.render('GAME OVER',True,(0,0,0))
-   (g11kerpe,rzs43c5b)=(khl1n13j//2-chx3d43e.get_width()//2,pi3qk2ia//2-chx3d43e.get_height()//2)
-   je11e9ft.blit(o4dd1vn8,(g11kerpe+2,rzs43c5b+2))
-   je11e9ft.blit(chx3d43e,(g11kerpe,rzs43c5b))
-   vk3g84ut=uos0fb4y.render(f'You reached Level {player.jqxs6esj}  |  +{nd31k9qm} resources',True,bom5igqp['srs7gu'])
-   je11e9ft.blit(vk3g84ut,(khl1n13j//2-vk3g84ut.get_width()//2,rzs43c5b+chx3d43e.get_height()+10))
-   tb4ldims=d1b3jczu.render('Press ENTER to return to the Homebase',True,bom5igqp['srs7gu'])
-   je11e9ft.blit(tb4ldims,(khl1n13j//2-tb4ldims.get_width()//2,rzs43c5b+chx3d43e.get_height()+40))
+       vpbwhvnz=player.jyjhu8my.get(key,0)
+       title=f"{qqu7eeqt[key]['eenui3']}  Lv.{vpbwhvnz} -> {vpbwhvnz + 1}"
+       subtitle=qqu7eeqt[key]['cqxm06']
+      uva2ieuc=hc58drc1(gqq4d3kz.zdan085r.yypp5zp7+12,u23y30ys+mc8qizk3*ytv3i12v+6,gqq4d3kz.zdan085r.width-24,ytv3i12v-12,mn9er14f,fq85jsg6,f2pcn9t8,aye511mk,tp2ex5t5,title,12,subtitle=subtitle,sub_font=yg87oi0e,kind=kind,key=key)
+      gqq4d3kz.add(uva2ieuc)
+   if gqq4d3kz is not None:
+    for l9enulqj in gqq4d3kz.mytn02yc:
+     l9enulqj.update(qbbz2sf6)
+     if l9enulqj.f8wquuy5:
+      if l9enulqj.kind=='h7kr0a':
+       z5x8a5fb.append(l9enulqj.key)
+       player.l3m25a5p[l9enulqj.key]=1
+       mpdzp6lf[l9enulqj.key]=mjh75lxo[l9enulqj.key]
+      elif l9enulqj.kind=='r8imoe':
+       player.jo8e7flq(l9enulqj.key)
+      elif l9enulqj.kind=='ceb875':
+       player.ygspk9p3(l9enulqj.key)
+      player.n64fgwje=False
+      gqq4d3kz=None
+  zorxdtg5(hfb85p86)
+  (hfb85p86,ejwtl9tq,gn89qkns)=got7txkd(hfb85p86,ejwtl9tq,gn89qkns,player,yuibrsz1)
+  ra73jgzl=player.zdan085r.yypp5zp7-qxaprpn6//2
+  kmgfxc08=player.zdan085r.tjy1o2rn-ibps3y70//2
+  ra73jgzl=max(min(ra73jgzl,oiqvnb4g-qxaprpn6),0)
+  kmgfxc08=max(min(kmgfxc08,ozp08j3t-ibps3y70),0)
+  ljk4q5v7=cqheyto5=0
+  if player.rgdej31g:
+   player.v6xii5p5-=1
+   ljk4q5v7=random.randint(-r0tvhhpb,r0tvhhpb)
+   cqheyto5=random.randint(-r0tvhhpb,r0tvhhpb)
+   ra73jgzl+=ljk4q5v7
+   kmgfxc08+=cqheyto5
+   if player.v6xii5p5<=0:
+    player.rgdej31g=False
+  uj64qhks.fill(iq5c34dx['uonjpi'])
+  ruq9e5co(uj64qhks,ra73jgzl,kmgfxc08)
+  for mal2w37d in divsolml:
+   mal2w37d.izhwy9he(uj64qhks,ra73jgzl,kmgfxc08)
+  player.izhwy9he(uj64qhks,ra73jgzl,kmgfxc08)
+  for pa8s8hmb in hfb85p86:
+   pa8s8hmb.izhwy9he(uj64qhks,ra73jgzl,kmgfxc08)
+   for v83tqll8 in pa8s8hmb.t1w1ht7p:
+    v83tqll8.izhwy9he(uj64qhks,ra73jgzl,kmgfxc08)
+  for b06xkxb9 in ejwtl9tq:
+   b06xkxb9.izhwy9he(uj64qhks,ra73jgzl,kmgfxc08)
+  for tk0qtl3q in gn89qkns:
+   tk0qtl3q.izhwy9he(uj64qhks,ra73jgzl,kmgfxc08)
+  for mcup8ijl in vk3g84ut:
+   pygame.draw.circle(uj64qhks,mcup8ijl['wn0jbz'],(int(mcup8ijl['huplvq']-ra73jgzl),int(mcup8ijl['jy66p6']-kmgfxc08)),mcup8ijl['mxhw0i'])
+  for elwf90km in yuibrsz1:
+   elwf90km.izhwy9he(uj64qhks,ra73jgzl,kmgfxc08)
+  if gqq4d3kz!=None:
+   gqq4d3kz.izhwy9he(uj64qhks)
+  u15pdtz9=40+18*len(z5x8a5fb)
+  wi8skch8(uj64qhks,pygame.Rect(12,12,190,u15pdtz9))
+  nbwye6qv=rzewviyt.render(f'Enemies: {len(hfb85p86)}',True,(20,20,20))
+  uj64qhks.blit(nbwye6qv,(20+ljk4q5v7,20+cqheyto5))
+  holeyrvx=50
+  for su1hbj6t in z5x8a5fb:
+   vpbwhvnz=player.l3m25a5p.get(su1hbj6t,1)
+   u1ni10kq=yg87oi0e.render(f'{uyhl1c32[su1hbj6t]} Lv.{vpbwhvnz}',True,(30,30,30))
+   uj64qhks.blit(u1ni10kq,(20+ljk4q5v7,holeyrvx+cqheyto5))
+   holeyrvx+=18
+  wi8skch8(uj64qhks,pygame.Rect(qxaprpn6-180,12,168,32))
+  trdhw9re=yg87oi0e.render(f'Resources: {lgbpj4uf}',True,(20,20,20))
+  uj64qhks.blit(trdhw9re,(qxaprpn6-170+ljk4q5v7,20+cqheyto5))
+  if vvslh9bh:
+   ysqg8x80=yg87oi0e.render('Opening chest... weapons offline!',True,iq5c34dx['g6j8y6'])
+   uj64qhks.blit(ysqg8x80,(qxaprpn6//2-ysqg8x80.get_width()//2+ljk4q5v7,12+cqheyto5))
+  wi8skch8(uj64qhks,pygame.Rect(12,ibps3y70-50,388,38))
+  onqyyf9r=title_font.render(f'Lv.{player.zpajssuu}',True,(20,20,20))
+  uj64qhks.blit(onqyyf9r,(20+ljk4q5v7,ibps3y70-40+cqheyto5))
+  az2ueaxy=gmjkv5us[min(player.zpajssuu,len(gmjkv5us)-1)]
+  kodpvjtu=min(1.0,player.p2nv01zd/az2ueaxy)
+  ep6beffl(uj64qhks,90,ibps3y70-34,290,kodpvjtu,height=16,fg=iq5c34dx['lwr965'],bg=(70,70,70))
+  if mygfliji:
+   a8ax40dt=pygame.Surface((qxaprpn6,ibps3y70),pygame.SRCALPHA)
+   a8ax40dt.fill((0,0,0,150))
+   uj64qhks.blit(a8ax40dt,(0,0))
+   nbwye6qv=on0jnwny.render('GAME OVER',True,iq5c34dx['j6ridl'])
+   no0u93mz=on0jnwny.render('GAME OVER',True,(0,0,0))
+   (nd6357oo,li9nb74x)=(qxaprpn6//2-nbwye6qv.get_width()//2,ibps3y70//2-nbwye6qv.get_height()//2)
+   uj64qhks.blit(no0u93mz,(nd6357oo+2,li9nb74x+2))
+   uj64qhks.blit(nbwye6qv,(nd6357oo,li9nb74x))
+   d1hm38ks=rzewviyt.render(f'You reached Level {player.zpajssuu}  |  +{lgbpj4uf} resources',True,iq5c34dx['d9zn9i'])
+   uj64qhks.blit(d1hm38ks,(qxaprpn6//2-d1hm38ks.get_width()//2,li9nb74x+nbwye6qv.get_height()+10))
+   h4l1vznq=yg87oi0e.render('Press ENTER to return to the Homebase',True,iq5c34dx['d9zn9i'])
+   uj64qhks.blit(h4l1vznq,(qxaprpn6//2-h4l1vznq.get_width()//2,li9nb74x+nbwye6qv.get_height()+40))
   pygame.display.flip()
-  am2vajep.tick(f935a0l7)
-def v15cqzcu():
- jxxgaear=zmybd2qe()
- if jxxgaear is None:
+  uww5wfcp.tick(gokc1msy)
+def semqgy27():
+ jenvg3kk=he9p3jpx()
+ if jenvg3kk is None:
   return
- pcvsqame=yjluujmi(jxxgaear)
- def bokzixza(f8wquuy5):
-  nyrid3dn(jxxgaear,f8wquuy5)
- bokzixza(pcvsqame)
+ vhxs58yr=ftlpq2wg(jenvg3kk)
+ def cknfu84x(amcixdu1):
+  exvaj2k8(jenvg3kk,amcixdu1)
+ cknfu84x(vhxs58yr)
  while True:
-  lp0lzjje=n3rlkte4(je11e9ft,am2vajep,pcvsqame,bokzixza)
-  if lp0lzjje=='quit':
+  xd1wjcit=la3kkrzd(uj64qhks,uww5wfcp,vhxs58yr,cknfu84x)
+  if xd1wjcit=='quit':
    break
-  if lp0lzjje=='start_game':
-   (gn89qkns,gqj5sxvw,b78okz1p)=xd8wz42o(pcvsqame)
-   pcvsqame['resources']+=gn89qkns
-   pcvsqame['high_level']=max(pcvsqame.get('high_level',0),gqj5sxvw)
-   pcvsqame['runs_played']=pcvsqame.get('runs_played',0)+1
-   bokzixza(pcvsqame)
-   if b78okz1p:
+  if xd1wjcit=='start_game':
+   (bfoqmf5l,wy0mahym,eehou6ql)=vyb6li07(vhxs58yr)
+   vhxs58yr['resources']+=bfoqmf5l
+   vhxs58yr['high_level']=max(vhxs58yr.get('high_level',0),wy0mahym)
+   vhxs58yr['runs_played']=vhxs58yr.get('runs_played',0)+1
+   cknfu84x(vhxs58yr)
+   if eehou6ql:
     break
 if __name__=='__main__':
- v15cqzcu()
+ semqgy27()
