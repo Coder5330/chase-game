@@ -10,31 +10,31 @@ sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent.parent))
 import pygame
 pygame.init()
 pygame.display.set_mode((1,1))
-from rlfzkicw import k1wj0tpa
-from fxc7urvq import d46aexl6
-class gdzr1yxr(unittest.TestCase):
- def u1ni10kq(self):
+from c8v341on import c8yfbntp
+from uu86zjq7 import wd6r30oj
+class gl08yg0j(unittest.TestCase):
+ def rr9u1oe5(self):
   """Start-of-run edge case: only GRUNT unlocked."""
-  qbbz2sf6=[]
-  d46aexl6(qbbz2sf6,['rqg433'])
-  self.assertEqual(len(qbbz2sf6),1)
-  self.assertEqual(qbbz2sf6[0].type,'rqg433')
- def sfu38gl2(self):
+  g8kk791z=[]
+  wd6r30oj(g8kk791z,['mbslul'])
+  self.assertEqual(len(g8kk791z),1)
+  self.assertEqual(g8kk791z[0].type,'mbslul')
+ def p2nv01zd(self):
   """Regression: spawn_enemy used to use random.choice(), giving every
         unlocked archetype an equal chance -- meaning a level-10 run still
         mostly spawned trivial GRUNTs. Weighting should make the most
         recently unlocked archetype (last in the list) clearly favoured
         over the first, without the first dropping to zero."""
   random.seed(1234)
-  ebt3g2qz=collections.Counter()
-  vhxs58yr=4000
-  for mqp49kwv in range(vhxs58yr):
-   qbbz2sf6=[]
-   d46aexl6(qbbz2sf6,k1wj0tpa)
-   ebt3g2qz[qbbz2sf6[0].type]+=1
-  j1ldqnk2=k1wj0tpa[0]
-  d1b3jczu=k1wj0tpa[-1]
-  self.assertGreater(ebt3g2qz[d1b3jczu],ebt3g2qz[j1ldqnk2]*5,'most recently unlocked archetype should spawn far more often')
-  self.assertGreater(ebt3g2qz[j1ldqnk2],0,'oldest archetype should still spawn sometimes, not vanish entirely')
+  clkqzfpq=collections.Counter()
+  g1g1r1dw=4000
+  for ocij2v2h in range(g1g1r1dw):
+   g8kk791z=[]
+   wd6r30oj(g8kk791z,c8yfbntp)
+   clkqzfpq[g8kk791z[0].type]+=1
+  dq2fa39e=c8yfbntp[0]
+  mcup8ijl=c8yfbntp[-1]
+  self.assertGreater(clkqzfpq[mcup8ijl],clkqzfpq[dq2fa39e]*5,'most recently unlocked archetype should spawn far more often')
+  self.assertGreater(clkqzfpq[dq2fa39e],0,'oldest archetype should still spawn sometimes, not vanish entirely')
 if __name__=='__main__':
  unittest.main()
