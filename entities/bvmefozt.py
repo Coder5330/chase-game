@@ -122,7 +122,7 @@ class yur7ko64:
   w8wj0uun=self.mqxlm5q2.render('Hp.',True,(20,20,20))
   ukshy8nb.blit(w8wj0uun,(233,23))
   rzewviyt(ukshy8nb,297,25,290,cqheyto5,height=19)
-  w8wj0uun=self.mqxlm5q2.render(f'{self.u9el8hl8}/{self.nii6l3ue}',True,(20,20,20))
+  w8wj0uun=self.mqxlm5q2.render(f'{round(self.u9el8hl8)}/{self.nii6l3ue}',True,(20,20,20))
   width=w8wj0uun.get_width()
   height=w8wj0uun.get_height()
   ukshy8nb.blit(w8wj0uun,(442-width//2,34.5-height//2))
