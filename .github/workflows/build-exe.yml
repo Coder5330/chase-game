@@ -1,0 +1,77 @@
+name: Build executables
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            data_sep: ";"
+            asset_name: chase-game-windows.exe
+          - os: macos-latest
+            data_sep: ":"
+            asset_name: chase-game-mac.zip
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pygame pyinstaller
+
+      - name: Build executable
+        run: pyinstaller --onefile --windowed --name chase-game --add-data "assets${{ matrix.data_sep }}assets" main.py
+
+      - name: Package artifact (Windows)
+        if: matrix.os == 'windows-latest'
+        shell: bash
+        run: cp dist/chase-game.exe "dist/${{ matrix.asset_name }}"
+
+      - name: Package artifact (macOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          cd dist
+          zip -r "${{ matrix.asset_name }}" chase-game.app
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.asset_name }}
+          path: dist/${{ matrix.asset_name }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Publish "latest" release
+        shell: bash
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest \
+            artifacts/chase-game-windows.exe/chase-game-windows.exe \
+            artifacts/chase-game-mac.zip/chase-game-mac.zip \
+            --title "Latest build" \
+            --notes "Automated build of the latest obfuscated push."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

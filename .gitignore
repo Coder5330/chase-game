@@ -2,3 +2,6 @@
 __pycache__/
 saves/
 strip_comments.py
+build/
+dist/
+*.spec
