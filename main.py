@@ -1,64 +1,64 @@
 import pygame
-from omerbyea import*
-from hb1r8vnr import*
-from odog8cfe import*
-from jrk79ufu import tb4ldims,byl68ntk,rh0w064w,n2vlpys2
-from jggz62fe import stv18kgy
-from rqke2gjr import t54piwzn
+from ykatqyds import*
+from ifcl5efj import*
+from pmpxkc5i import*
+from t4qdbxvh import vk3g84ut,qcd81twh,u1ni10kq,n2vlpys2
+from entfk7or import iaq7b7v1
+from jggz62fe import f80ebkjf
 pygame.init()
-q3n2qb6g=pygame.display.set_mode((cqoldfor,tp0lvsnu))
+u15pdtz9=pygame.display.set_mode((cqoldfor,tp0lvsnu))
 u1jhuwb6=pygame.time.Clock()
-def f80ebkjf():
+def uwxrum2l():
  title_font=pygame.font.SysFont('arial',40,bold=True)
- wvpw232u=pygame.font.SysFont('arial',16)
+ rktlzkj4=pygame.font.SysFont('arial',16)
  ugez7bh2=pygame.font.SysFont('arial',22,bold=True)
- su1hbj6t=pygame.font.SysFont('arial',15)
+ qdnai89y=pygame.font.SysFont('arial',15)
  bllo3rbx=[]
- for pcvsqame in range(1,n2vlpys2+1):
-  rk36m8jv=rh0w064w(pcvsqame)
-  if rk36m8jv:
-   subtitle=f"Level {rk36m8jv['high_level']}  |  {rk36m8jv['resources']} resources  |  {rk36m8jv['runs_played']} runs"
+ for nyrid3dn in range(1,n2vlpys2+1):
+  k82853uy=u1ni10kq(nyrid3dn)
+  if k82853uy:
+   subtitle=f"Level {k82853uy['high_level']}  |  {k82853uy['resources']} resources  |  {k82853uy['runs_played']} runs"
   else:
    subtitle='Empty - New Game'
-  li9nb74x=hc58drc1(cqoldfor//2-170,170+(pcvsqame-1)*110,340,90,mn9er14f,fq85jsg6,f2pcn9t8,aye511mk,ugez7bh2,f'Slot {pcvsqame}',12,subtitle=subtitle,sub_font=su1hbj6t,kind='slot',key=pcvsqame)
+  li9nb74x=hc58drc1(cqoldfor//2-170,170+(nyrid3dn-1)*110,340,90,mn9er14f,fq85jsg6,f2pcn9t8,aye511mk,ugez7bh2,f'Slot {nyrid3dn}',12,subtitle=subtitle,sub_font=qdnai89y,kind='slot',key=nyrid3dn)
   bllo3rbx.append(li9nb74x)
  while True:
-  eatvzkhi=pygame.event.get()
-  for xq46nouh in eatvzkhi:
-   if xq46nouh.type==pygame.QUIT:
+  s4rxyj38=pygame.event.get()
+  for eatvzkhi in s4rxyj38:
+   if eatvzkhi.type==pygame.QUIT:
     return None
   for li9nb74x in bllo3rbx:
-   li9nb74x.update(eatvzkhi)
+   li9nb74x.update(s4rxyj38)
    if li9nb74x.vw6m7b5c:
     return li9nb74x.key
-  q3n2qb6g.fill(iq5c34dx['ntxrgn'])
-  zgomf9pm=title_font.render('CHASE GAME',True,(20,20,40))
-  q3n2qb6g.blit(zgomf9pm,(cqoldfor//2-zgomf9pm.get_width()//2,70))
-  cp91i3vm=wvpw232u.render('Choose a save slot',True,(30,30,30))
-  q3n2qb6g.blit(cp91i3vm,(cqoldfor//2-cp91i3vm.get_width()//2,135))
+  u15pdtz9.fill(iq5c34dx['edxoq2'])
+  huh17j8q=title_font.render('CHASE GAME',True,(20,20,40))
+  u15pdtz9.blit(huh17j8q,(cqoldfor//2-huh17j8q.get_width()//2,70))
+  wvpw232u=rktlzkj4.render('Choose a save slot',True,(30,30,30))
+  u15pdtz9.blit(wvpw232u,(cqoldfor//2-wvpw232u.get_width()//2,135))
   for li9nb74x in bllo3rbx:
-   li9nb74x.tnz61231(q3n2qb6g)
+   li9nb74x.v15cqzcu(u15pdtz9)
   pygame.display.flip()
   u1jhuwb6.tick(pi3qk2ia)
-def ob7p0rnp():
- l1rdxck3=f80ebkjf()
- if l1rdxck3 is None:
+def lhgk5bwi():
+ su1hbj6t=uwxrum2l()
+ if su1hbj6t is None:
   return
- y9ayq6ww=tb4ldims(l1rdxck3)
- def gxlk8wru(uc1xi04b):
-  byl68ntk(l1rdxck3,uc1xi04b)
- gxlk8wru(y9ayq6ww)
+ q3n2qb6g=vk3g84ut(su1hbj6t)
+ def byl68ntk(fp47b42g):
+  qcd81twh(su1hbj6t,fp47b42g)
+ byl68ntk(q3n2qb6g)
  while True:
-  uva2ieuc=stv18kgy(q3n2qb6g,u1jhuwb6,y9ayq6ww,gxlk8wru)
+  uva2ieuc=iaq7b7v1(u15pdtz9,u1jhuwb6,q3n2qb6g,byl68ntk)
   if uva2ieuc=='quit':
    break
   if uva2ieuc=='start_game':
-   (g70e3p15,pllkstn3,v24479qt)=t54piwzn(y9ayq6ww,q3n2qb6g,u1jhuwb6)
-   y9ayq6ww['resources']+=g70e3p15
-   y9ayq6ww['high_level']=max(y9ayq6ww.get('high_level',0),pllkstn3)
-   y9ayq6ww['runs_played']=y9ayq6ww.get('runs_played',0)+1
-   gxlk8wru(y9ayq6ww)
-   if v24479qt:
+   (aicvqy5i,cq2q4qer,hdw6lqwl)=f80ebkjf(q3n2qb6g,u15pdtz9,u1jhuwb6)
+   q3n2qb6g['resources']+=aicvqy5i
+   q3n2qb6g['high_level']=max(q3n2qb6g.get('high_level',0),cq2q4qer)
+   q3n2qb6g['runs_played']=q3n2qb6g.get('runs_played',0)+1
+   byl68ntk(q3n2qb6g)
+   if hdw6lqwl:
     break
 if __name__=='__main__':
- ob7p0rnp()
+ lhgk5bwi()
