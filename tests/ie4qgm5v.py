@@ -10,31 +10,31 @@ sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent.parent))
 import pygame
 pygame.init()
 pygame.display.set_mode((1,1))
-from z4w1arag import c8yfbntp
-from umjmbukd import gxlk8wru
+from z1yhxso7 import c8yfbntp
+from z286utio import byl68ntk
 class xd1wjcit(unittest.TestCase):
- def e9y3z2t4(self):
+ def usz2kuuo(self):
   """Start-of-run edge case: only GRUNT unlocked."""
-  mygfliji=[]
-  gxlk8wru(mygfliji,['xyhhg8'])
-  self.assertEqual(len(mygfliji),1)
-  self.assertEqual(mygfliji[0].type,'xyhhg8')
- def s5r96khu(self):
+  yjluujmi=[]
+  byl68ntk(yjluujmi,['m1v3zo'])
+  self.assertEqual(len(yjluujmi),1)
+  self.assertEqual(yjluujmi[0].type,'m1v3zo')
+ def o9zqyahu(self):
   """Regression: spawn_enemy used to use random.choice(), giving every
         unlocked archetype an equal chance -- meaning a level-10 run still
         mostly spawned trivial GRUNTs. Weighting should make the most
         recently unlocked archetype (last in the list) clearly favoured
         over the first, without the first dropping to zero."""
   random.seed(1234)
-  ep6beffl=collections.Counter()
-  npcxa5s0=4000
-  for v83tqll8 in range(npcxa5s0):
-   mygfliji=[]
-   gxlk8wru(mygfliji,c8yfbntp)
-   ep6beffl[mygfliji[0].type]+=1
-  w8y72ivg=c8yfbntp[0]
-  k3z6bz8u=c8yfbntp[-1]
-  self.assertGreater(ep6beffl[k3z6bz8u],ep6beffl[w8y72ivg]*5,'most recently unlocked archetype should spawn far more often')
-  self.assertGreater(ep6beffl[w8y72ivg],0,'oldest archetype should still spawn sometimes, not vanish entirely')
+  wi8skch8=collections.Counter()
+  v0rxxf36=4000
+  for v83tqll8 in range(v0rxxf36):
+   yjluujmi=[]
+   byl68ntk(yjluujmi,c8yfbntp)
+   wi8skch8[yjluujmi[0].type]+=1
+  y8bv78hu=c8yfbntp[0]
+  s8438tgb=c8yfbntp[-1]
+  self.assertGreater(wi8skch8[s8438tgb],wi8skch8[y8bv78hu]*5,'most recently unlocked archetype should spawn far more often')
+  self.assertGreater(wi8skch8[y8bv78hu],0,'oldest archetype should still spawn sometimes, not vanish entirely')
 if __name__=='__main__':
  unittest.main()
