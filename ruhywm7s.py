@@ -1,104 +1,40 @@
-import json
-import pickle
-import os
-import hmac
-import hashlib
-import base64
-from vnbnqbnx import n2vlpys2
-mvxdp5gj=os.path.join(os.path.dirname(os.path.abspath(__file__)),'saves')
-def wkof8krd(vt6om1fb,key):
- return bytes((sv5f1bcp^key[xd8wz42o%len(key)]for(xd8wz42o,sv5f1bcp)in enumerate(vt6om1fb)))
-wrbw2zla=b'gr8-annoyance-pass!'
-nd96qe3r=bytes.fromhex('29376a5c0214021e20360228047a221010426f152b6f552d212a224c32290f0e4e42113f10130b196b412f253428091b0f325810')
-def zs3kkv9r():
- le9oe941=wkof8krd(nd96qe3r,wrbw2zla)
- return base64.b64decode(le9oe941)
-wkzorqqf=zs3kkv9r()
-def iy6qktc8(vt6om1fb):
- return wkof8krd(vt6om1fb,wkzorqqf)
-def j1i2hgj1(uz6kf162):
- return hmac.new(wkzorqqf,uz6kf162,hashlib.sha256).hexdigest()
-def yx4w6xlp(yp3cyazb):
- return os.path.join(mvxdp5gj,f'slot_{yp3cyazb}.sav')
-def k44nlz15(yp3cyazb):
- return os.path.join(mvxdp5gj,f'slot_{yp3cyazb}.json')
-def bwiykid9(yp3cyazb):
- return os.path.join(mvxdp5gj,f'slot_{yp3cyazb}.pkl')
-def rzewviyt():
- return{'resources':0,'meta_upgrades':{},'high_level':0,'runs_played':0}
-def cb2uuijn(yp3cyazb):
- return os.path.exists(yx4w6xlp(yp3cyazb))or os.path.exists(k44nlz15(yp3cyazb))or os.path.exists(bwiykid9(yp3cyazb))
-def jmpioygg(yp3cyazb):
- uj64qhks=k44nlz15(yp3cyazb)
- if os.path.exists(uj64qhks):
-  try:
-   with open(uj64qhks,'r')as r98s4c3b:
-    vt6om1fb=json.load(r98s4c3b)
-   if isinstance(vt6om1fb,dict):
-    return vt6om1fb
-  except Exception:
-   pass
-  return None
- uj64qhks=bwiykid9(yp3cyazb)
- if os.path.exists(uj64qhks):
-  try:
-   with open(uj64qhks,'rb')as r98s4c3b:
-    vt6om1fb=pickle.load(r98s4c3b)
-   if isinstance(vt6om1fb,dict):
-    return vt6om1fb
-  except Exception:
-   pass
-  return None
- return None
-def yw5py6b2(yp3cyazb):
- uj64qhks=yx4w6xlp(yp3cyazb)
- if not os.path.exists(uj64qhks):
-  return None
- try:
-  with open(uj64qhks,'r')as r98s4c3b:
-   qhkc856w=json.load(r98s4c3b)
-  uz6kf162=iy6qktc8(base64.b64decode(qhkc856w['e0s41k']))
-  if hmac.compare_digest(j1i2hgj1(uz6kf162),qhkc856w.get('yrp422','')):
-   vt6om1fb=json.loads(uz6kf162.decode('utf-8'))
-   if isinstance(vt6om1fb,dict):
-    return vt6om1fb
- except Exception:
-  pass
- return None
-def diuu9k9x(yp3cyazb):
- for uj64qhks in(k44nlz15(yp3cyazb),bwiykid9(yp3cyazb)):
-  if os.path.exists(uj64qhks):
-   try:
-    os.remove(uj64qhks)
-   except OSError:
-    pass
-def xwqvr1h6(yp3cyazb):
- try:
-  vt6om1fb=yw5py6b2(yp3cyazb)
-  pg3yu6vk=False
-  if vt6om1fb is None:
-   vt6om1fb=jmpioygg(yp3cyazb)
-   pg3yu6vk=vt6om1fb is not None
-  vmy9x8sy=rzewviyt()
-  if vt6om1fb:
-   vmy9x8sy.update(vt6om1fb)
-   gj29yfc2(yp3cyazb,vmy9x8sy)
-   if pg3yu6vk:
-    diuu9k9x(yp3cyazb)
-  return vmy9x8sy
- except Exception:
-  return rzewviyt()
-def gj29yfc2(yp3cyazb,vt6om1fb):
- try:
-  os.makedirs(mvxdp5gj,exist_ok=True)
-  uz6kf162=json.dumps(vt6om1fb).encode('utf-8')
-  qhkc856w={'e0s41k':base64.b64encode(iy6qktc8(uz6kf162)).decode('ascii'),'yrp422':j1i2hgj1(uz6kf162)}
-  with open(yx4w6xlp(yp3cyazb),'w')as r98s4c3b:
-   json.dump(qhkc856w,r98s4c3b)
- except Exception:
-  pass
-def xvzc7d2k(yp3cyazb):
- if not cb2uuijn(yp3cyazb):
-  return None
- vt6om1fb=xwqvr1h6(yp3cyazb)
- return{'resources':vt6om1fb.get('resources',0),'high_level':vt6om1fb.get('high_level',0),'runs_played':vt6om1fb.get('runs_played',0)}
+import pygame
+import math
+import random
+from zfiblejg import*
+class m6fao72k:
+ def __init__(self,x3zo7utx,cjy62zee):
+  self.tby49e7e=pygame.Rect(int(x3zo7utx),int(cjy62zee),34,34)
+  self.xasez2nx=0
+  self.pllkstn3=dxmo5bxx*pi3qk2ia
+  self.la3kkrzd=False
+ def update(self,player):
+  if self.la3kkrzd:
+   return False
+  jqxs6esj=math.hypot(player.tby49e7e.centerx-self.tby49e7e.centerx,player.tby49e7e.centery-self.tby49e7e.centery)
+  nyrid3dn=jqxs6esj<=oeimvihc
+  if nyrid3dn:
+   self.xasez2nx+=1
+   if self.xasez2nx>=self.pllkstn3:
+    self.la3kkrzd=True
+  return nyrid3dn and(not self.la3kkrzd)
+ def dw7nh8rq(self,uwxrum2l,uos0fb4y,obc2nnuv):
+  x3zo7utx=self.tby49e7e.x3zo7utx-uos0fb4y
+  cjy62zee=self.tby49e7e.cjy62zee-obc2nnuv
+  pygame.draw.rect(uwxrum2l,(101,67,33),(x3zo7utx,cjy62zee,self.tby49e7e.width,self.tby49e7e.height),border_radius=6)
+  pygame.draw.rect(uwxrum2l,(60,40,20),(x3zo7utx,cjy62zee,self.tby49e7e.width,self.tby49e7e.height),width=2,border_radius=6)
+  pygame.draw.rect(uwxrum2l,(218,165,32),(x3zo7utx,cjy62zee+self.tby49e7e.height//2-3,self.tby49e7e.width,6))
+  pygame.draw.circle(uwxrum2l,(218,165,32),(x3zo7utx+self.tby49e7e.width//2,cjy62zee+self.tby49e7e.height//2),4)
+  if 0<self.xasez2nx<self.pllkstn3:
+   tj0nmeoq=self.xasez2nx/self.pllkstn3
+   divsolml=self.tby49e7e.width
+   pygame.draw.rect(uwxrum2l,(40,40,40),(x3zo7utx,cjy62zee-10,divsolml,6),border_radius=3)
+   pygame.draw.rect(uwxrum2l,(80,200,255),(x3zo7utx,cjy62zee-10,int(divsolml*tj0nmeoq),6),border_radius=3)
+def su1hbj6t(player):
+ ejwtl9tq=random.uniform(0,2*math.pi)
+ jqxs6esj=random.uniform(150,350)
+ x3zo7utx=player.tby49e7e.centerx+math.cos(ejwtl9tq)*jqxs6esj
+ cjy62zee=player.tby49e7e.centery+math.sin(ejwtl9tq)*jqxs6esj
+ x3zo7utx=max(0,min(x3zo7utx,v83tqll8-34))
+ cjy62zee=max(0,min(cjy62zee,cqoldfor-34))
+ return m6fao72k(x3zo7utx,cjy62zee)

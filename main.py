@@ -1,64 +1,64 @@
 import pygame
-from vnbnqbnx import*
-from zjr81bmq import*
-from iheyce4q import*
-from ruhywm7s import xwqvr1h6,gj29yfc2,xvzc7d2k,n2vlpys2
-from r1yohmi9 import q26yg3dx
-from s866pb90 import qertb74r
+from zfiblejg import*
+from ok38p6fv import*
+from wczh9ier import*
+from fwftggz6 import mcup8ijl,iaq7b7v1,jyjhu8my,n2vlpys2
+from vtempxkc import rk43safy
+from cg5dog8c import kz1uu7zy
 pygame.init()
-g1b3d505=pygame.display.set_mode((ygspk9p3,tp0lvsnu))
-ep6beffl=pygame.time.Clock()
-def t5sn961j():
+uwxrum2l=pygame.display.set_mode((ygspk9p3,tp0lvsnu))
+u1jhuwb6=pygame.time.Clock()
+def gj29yfc2():
  title_font=pygame.font.SysFont('arial',40,bold=True)
- arhnuxor=pygame.font.SysFont('arial',16)
- amcixdu1=pygame.font.SysFont('arial',22,bold=True)
- ck7n3bfh=pygame.font.SysFont('arial',15)
- ebt3g2qz=[]
- for xd8wz42o in range(1,n2vlpys2+1):
-  yypp5zp7=xvzc7d2k(xd8wz42o)
-  if yypp5zp7:
-   subtitle=f"Level {yypp5zp7['high_level']}  |  {yypp5zp7['resources']} resources  |  {yypp5zp7['runs_played']} runs"
+ cp91i3vm=pygame.font.SysFont('arial',16)
+ jm25len6=pygame.font.SysFont('arial',22,bold=True)
+ hdw6lqwl=pygame.font.SysFont('arial',15)
+ xp8mgyn2=[]
+ for bokzixza in range(1,n2vlpys2+1):
+  d0qzfhom=jyjhu8my(bokzixza)
+  if d0qzfhom:
+   subtitle=f"Level {d0qzfhom['high_level']}  |  {d0qzfhom['resources']} resources  |  {d0qzfhom['runs_played']} runs"
   else:
    subtitle='Empty - New Game'
-  dzsedfqs=hc58drc1(ygspk9p3//2-170,170+(xd8wz42o-1)*110,340,90,mn9er14f,fq85jsg6,f2pcn9t8,aye511mk,amcixdu1,f'Slot {xd8wz42o}',12,subtitle=subtitle,sub_font=ck7n3bfh,kind='slot',key=xd8wz42o)
-  ebt3g2qz.append(dzsedfqs)
+  tacj4t0s=hc58drc1(ygspk9p3//2-170,170+(bokzixza-1)*110,340,90,mn9er14f,fq85jsg6,f2pcn9t8,aye511mk,jm25len6,f'Slot {bokzixza}',12,subtitle=subtitle,sub_font=hdw6lqwl,kind='slot',key=bokzixza)
+  xp8mgyn2.append(tacj4t0s)
  while True:
-  kx74d0gj=pygame.event.get()
-  for zqcootnj in kx74d0gj:
-   if zqcootnj.type==pygame.QUIT:
+  mqxlm5q2=pygame.event.get()
+  for yrivh6t1 in mqxlm5q2:
+   if yrivh6t1.type==pygame.QUIT:
     return None
-  for dzsedfqs in ebt3g2qz:
-   dzsedfqs.update(kx74d0gj)
-   if dzsedfqs.oqse3tv1:
-    return dzsedfqs.key
-  g1b3d505.fill(iq5c34dx['bdoz6w'])
-  ywcxz2ei=title_font.render('CHASE GAME',True,(20,20,40))
-  g1b3d505.blit(ywcxz2ei,(ygspk9p3//2-ywcxz2ei.get_width()//2,70))
-  ftrflqbm=arhnuxor.render('Choose a save slot',True,(30,30,30))
-  g1b3d505.blit(ftrflqbm,(ygspk9p3//2-ftrflqbm.get_width()//2,135))
-  for dzsedfqs in ebt3g2qz:
-   dzsedfqs.sygvwopl(g1b3d505)
+  for tacj4t0s in xp8mgyn2:
+   tacj4t0s.update(mqxlm5q2)
+   if tacj4t0s.vw6m7b5c:
+    return tacj4t0s.key
+  uwxrum2l.fill(iq5c34dx['eqkwqh'])
+  it04chsd=title_font.render('CHASE GAME',True,(20,20,40))
+  uwxrum2l.blit(it04chsd,(ygspk9p3//2-it04chsd.get_width()//2,70))
+  nd31k9qm=cp91i3vm.render('Choose a save slot',True,(30,30,30))
+  uwxrum2l.blit(nd31k9qm,(ygspk9p3//2-nd31k9qm.get_width()//2,135))
+  for tacj4t0s in xp8mgyn2:
+   tacj4t0s.dw7nh8rq(uwxrum2l)
   pygame.display.flip()
-  ep6beffl.tick(pi3qk2ia)
-def mcup8ijl():
- uoloeazc=t5sn961j()
- if uoloeazc is None:
+  u1jhuwb6.tick(pi3qk2ia)
+def vk3g84ut():
+ v24479qt=gj29yfc2()
+ if v24479qt is None:
   return
- rk43safy=xwqvr1h6(uoloeazc)
- def kz1uu7zy(vt6om1fb):
-  gj29yfc2(uoloeazc,vt6om1fb)
- kz1uu7zy(rk43safy)
+ f80ebkjf=mcup8ijl(v24479qt)
+ def stv18kgy(fo75rh8l):
+  iaq7b7v1(v24479qt,fo75rh8l)
+ stv18kgy(f80ebkjf)
  while True:
-  lcj883dh=q26yg3dx(g1b3d505,ep6beffl,rk43safy,kz1uu7zy)
-  if lcj883dh=='quit':
+  am2vajep=rk43safy(uwxrum2l,u1jhuwb6,f80ebkjf,stv18kgy)
+  if am2vajep=='quit':
    break
-  if lcj883dh=='start_game':
-   (gubmc97c,qc06xq9j,q3n2qb6g)=qertb74r(rk43safy,g1b3d505,ep6beffl)
-   rk43safy['resources']+=gubmc97c
-   rk43safy['high_level']=max(rk43safy.get('high_level',0),qc06xq9j)
-   rk43safy['runs_played']=rk43safy.get('runs_played',0)+1
-   kz1uu7zy(rk43safy)
-   if q3n2qb6g:
+  if am2vajep=='start_game':
+   (jqzpniqf,fd6rupw2,ck7n3bfh)=kz1uu7zy(f80ebkjf,uwxrum2l,u1jhuwb6)
+   f80ebkjf['resources']+=jqzpniqf
+   f80ebkjf['high_level']=max(f80ebkjf.get('high_level',0),fd6rupw2)
+   f80ebkjf['runs_played']=f80ebkjf.get('runs_played',0)+1
+   stv18kgy(f80ebkjf)
+   if ck7n3bfh:
     break
 if __name__=='__main__':
- mcup8ijl()
+ vk3g84ut()
