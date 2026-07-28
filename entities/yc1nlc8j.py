@@ -5,6 +5,10 @@ from.uu86zjq7 import fd6rupw2,eohswq40
 pygame.init()
 wa11dpg8=pygame.Surface((qqu7eeqt+16,14),pygame.SRCALPHA)
 pygame.draw.ellipse(wa11dpg8,(0,0,0,90),wa11dpg8.get_rect())
+def wehlxslg(tj0nmeoq,todsx4nx,jmpioygg=120,vhxs58yr=10):
+ jyjhu8my=pygame.Surface((todsx4nx.width,todsx4nx.height),pygame.SRCALPHA)
+ pygame.draw.rect(jyjhu8my,(255,255,255,jmpioygg),jyjhu8my.get_rect(),border_radius=vhxs58yr)
+ tj0nmeoq.blit(jyjhu8my,todsx4nx.topleft)
 class yur7ko64:
  def __init__(self,meta_upgrades=None):
   meta_upgrades=meta_upgrades or{}
@@ -40,6 +44,7 @@ class yur7ko64:
   self.xu9ymszd=False
   self.v0rxxf36=0
   self.lgbpj4uf=[]
+  self.qhkc856w=pygame.font.SysFont('arial',20,bold=True)
  def diuu9k9x(self,key):
   self.kc1fjotg[key]+=1
   nyrid3dn=self.kc1fjotg[key]
@@ -113,3 +118,11 @@ class yur7ko64:
   pygame.draw.polygon(tj0nmeoq,(15,15,30),[e9y3z2t4,wvpw232u,upprat08],width=1)
   exvaj2k8=self.mpyxdw2z/self.mctwjlsh
   eohswq40(tj0nmeoq,htgsiwg0,hhl1737s-10,self.todsx4nx.width,exvaj2k8,height=6)
+  wehlxslg(tj0nmeoq,pygame.Rect(225,12,372,40))
+  jyjhu8my=self.qhkc856w.render('Hp.',True,(20,20,20))
+  tj0nmeoq.blit(jyjhu8my,(233,23))
+  eohswq40(tj0nmeoq,297,25,290,exvaj2k8,height=19)
+  jyjhu8my=self.qhkc856w.render(f'{self.mpyxdw2z}/{self.mctwjlsh}',True,(20,20,20))
+  width=jyjhu8my.get_width()
+  height=jyjhu8my.get_height()
+  tj0nmeoq.blit(jyjhu8my,(442-width//2,34.5-height//2))

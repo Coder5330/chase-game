@@ -92,6 +92,10 @@ def ytb9xxay(bdgbk2l0):
    if yjluujmi.type==pygame.KEYDOWN:
     if yjluujmi.key==pygame.K_p and(not izhwy9he):
      if trdhw9re:
+      zorxdtg5.o9zqyahu='| |'
+     else:
+      zorxdtg5.o9zqyahu='X'
+     if trdhw9re:
       izhwy9he=True
       tk0qtl3q=3
       h8s2ftom=time.time()
