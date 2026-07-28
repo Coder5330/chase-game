@@ -1,33 +1,45 @@
 import pygame
 import math
-from e87f8tsx import*
-from.odog8cfe import f935a0l7,l55nf4zw
-from.qxomxlvz import qcd81twh,b36htf4p
-class pq3vli7k(f935a0l7):
- def dw7nh8rq(self,byl68ntk,i20cv3tl,clkqzfpq):
-  j1kfk7y6=self.pllkstn3.j1kfk7y6-i20cv3tl
-  f1bl08kg=self.pllkstn3.f1bl08kg-clkqzfpq
-  rmm1zxyv=self.pllkstn3.centerx-i20cv3tl
-  g8kk791z=self.pllkstn3.centery-clkqzfpq
-  byl68ntk.blit(l55nf4zw,(rmm1zxyv-l55nf4zw.get_width()//2,f1bl08kg+self.pllkstn3.height-6))
-  llxxezdu=self.pllkstn3.width//2
-  for(uz6kf162,z3olfark)in((-6,4),(6,4),(0,-6)):
-   (bllo3rbx,jm25len6)=(rmm1zxyv+uz6kf162-llxxezdu//2,g8kk791z+z3olfark-llxxezdu//2)
-   uysal8m1=pygame.Rect(bllo3rbx,jm25len6,llxxezdu,llxxezdu)
-   pygame.draw.rect(byl68ntk,qcd81twh(self.hfb85p86,0.6),uysal8m1,border_radius=4)
-   ub68rerv=uysal8m1.inflate(-3,-3)
-   pygame.draw.rect(byl68ntk,self.hfb85p86,ub68rerv,border_radius=3)
-   pygame.draw.rect(byl68ntk,(15,15,15),uysal8m1,width=1,border_radius=4)
-  xu9ymszd=self.ftrflqbm/self.fdxj37c9
-  b36htf4p(byl68ntk,j1kfk7y6,f1bl08kg-8,self.pllkstn3.width,xu9ymszd,height=4)
- def he9p3jpx(self,player,tw76xato,qhkc856w):
-  yypp5zp7=k1wj0tpa[self.type]
-  do2m71hs=yypp5zp7['ujqigy']
-  for bokzixza in range(do2m71hs):
-   am2vajep=2*math.pi/do2m71hs*bokzixza
-   uz6kf162=self.pllkstn3.centerx+math.cos(am2vajep)*20
-   z3olfark=self.pllkstn3.centery+math.sin(am2vajep)*20
-   oqse3tv1=f935a0l7(self.type,uz6kf162-zxa3kx7e//2,z3olfark-zxa3kx7e//2)
-   oqse3tv1.ftrflqbm=max(1,int(oqse3tv1.fdxj37c9*0.4))
-   oqse3tv1.fdxj37c9=oqse3tv1.ftrflqbm
-   qhkc856w.append(oqse3tv1)
+from omerbyea import*
+from.erp0aga2 import f935a0l7
+class ozp08j3t(f935a0l7):
+ def __init__(self,mqxlm5q2,eolaq665,t5ivrocv):
+  super().__init__(mqxlm5q2,eolaq665,t5ivrocv)
+  self.uidlrye8=0
+  self.fo75rh8l=0
+  self.n8k03w0f=0
+ def yjr0fzau(self,player):
+  self.n8k03w0f+=0.35*(self.holeyrvx/self.wppsfnko if self.wppsfnko else 1)
+  p2nv01zd=k1wj0tpa[self.type]
+  if self.fo75rh8l>0:
+   self.fo75rh8l-=1
+   if self.fo75rh8l<=0:
+    self.holeyrvx=self.wppsfnko
+   return False
+  if self.uidlrye8>0:
+   self.uidlrye8-=1
+   return False
+  if abs(player.cq2q4qer.eolaq665-self.cq2q4qer.eolaq665)<p2nv01zd['w9laac']and abs(player.cq2q4qer.t5ivrocv-self.cq2q4qer.t5ivrocv)<p2nv01zd['w9laac']:
+   self.holeyrvx=self.wppsfnko*p2nv01zd['nddqhk']
+   self.fo75rh8l=p2nv01zd['v00vhm']
+   self.uidlrye8=p2nv01zd['kj2jvq']
+  return False
+ def tnz61231(self,q3n2qb6g,clkqzfpq,x5m9j98c):
+  eolaq665=self.cq2q4qer.eolaq665-clkqzfpq
+  t5ivrocv=self.cq2q4qer.t5ivrocv-x5m9j98c
+  g8kk791z=self.cq2q4qer.centerx-clkqzfpq
+  wzlm72je=self.cq2q4qer.centery-x5m9j98c
+  we4xyf9i=self.cq2q4qer.width//2
+  zpajssuu=t5ivrocv+self.cq2q4qer.height-3
+  nii6l3ue=(25,25,25)
+  j1ldqnk2=[(-1,-6,0),(-1,6,math.pi),(1,-6,math.pi),(1,6,0)]
+  for(jyjhu8my,v3e1ocjx,k1taa0i5)in j1ldqnk2:
+   tjy1o2rn=math.sin(self.n8k03w0f+k1taa0i5)
+   mcup8ijl=max(0,tjy1o2rn)*4
+   rktlzkj4=(g8kk791z+jyjhu8my*we4xyf9i*0.7,wzlm72je+v3e1ocjx)
+   jq1ddpus=g8kk791z+jyjhu8my*(we4xyf9i+9)+tjy1o2rn*3
+   damdvlnk=zpajssuu-mcup8ijl
+   zflv1xxl=((rktlzkj4[0]+jq1ddpus)/2,(rktlzkj4[1]+damdvlnk)/2-2)
+   pygame.draw.line(q3n2qb6g,nii6l3ue,rktlzkj4,zflv1xxl,3)
+   pygame.draw.line(q3n2qb6g,nii6l3ue,zflv1xxl,(jq1ddpus,damdvlnk),3)
+  self.win4olr6(q3n2qb6g,eolaq665,t5ivrocv,g8kk791z,wzlm72je)
