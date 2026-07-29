@@ -37,9 +37,13 @@ jobs:
           - os: windows-latest
             data_sep: ";"
             asset_name: chase-game-windows.exe
+            butler_platform: windows-amd64
+            itch_channel: windows
           - os: macos-latest
             data_sep: ":"
             asset_name: chase-game-mac.zip
+            butler_platform: darwin-arm64
+            itch_channel: mac
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -72,6 +76,17 @@ jobs:
         with:
           name: ${{ matrix.asset_name }}
           path: dist/${{ matrix.asset_name }}
+
+      - name: Push to itch.io
+        shell: bash
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+        run: |
+          curl -L -o butler.zip "https://broth.itch.zone/butler/${{ matrix.butler_platform }}/LATEST/archive/default"
+          unzip -o butler.zip -d butler_bin
+          BUTLER_BIN=$(find butler_bin -maxdepth 1 -iname "butler*" -type f | head -1)
+          chmod +x "$BUTLER_BIN"
+          "$BUTLER_BIN" push "dist/${{ matrix.asset_name }}" coder5330/chase-game:${{ matrix.itch_channel }} --userversion "$(git rev-parse --short HEAD)"
 
   release:
     needs: build
