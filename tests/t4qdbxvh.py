@@ -2,178 +2,158 @@ import os
 import sys
 import pathlib
 import unittest
+import math
 os.environ.setdefault('SDL_VIDEODRIVER','dummy')
 os.environ.setdefault('SDL_AUDIODRIVER','dummy')
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent.parent))
 import pygame
 pygame.init()
 pygame.display.set_mode((1,1))
-from j1bmqf7z import c8yfbntp,k1wj0tpa
-from entities import r0tvhhpb,f935a0l7,mfyb8dal,sivwpvs7
-from nnnkm95d import pllkstn3
-pq3vli7k=pygame.font.SysFont('arial',15)
-class gdzr1yxr(unittest.TestCase):
- def y06nkwfg(self):
-  """Every name in ENEMY_UNLOCK_ORDER must produce a working enemy --
-        catches typos in ENEMY_CLASSES keys (e.g. the old "ASSASIN" bug)."""
-  for got7txkd in c8yfbntp:
-   with self.subTest(archetype=got7txkd):
-    zqcootnj=mfyb8dal(got7txkd,0,0)
-    self.assertEqual(zqcootnj.type,got7txkd)
- def l0sqg4ei(self):
-  self.assertNotIn('r6q37c',sivwpvs7)
-  self.assertIs(type(mfyb8dal('r6q37c',0,0)),f935a0l7)
- def kc1fjotg(self):
-  for(got7txkd,cls)in sivwpvs7.items():
-   with self.subTest(archetype=got7txkd):
-    self.assertIs(type(mfyb8dal(got7txkd,0,0)),cls)
- def h4m2ec8r(self):
-  player=r0tvhhpb()
-  rwybow23=pygame.Surface((200,200))
-  for got7txkd in c8yfbntp:
-   with self.subTest(archetype=got7txkd):
-    zqcootnj=mfyb8dal(got7txkd,100,100)
-    for t1w1ht7p in range(20):
-     zqcootnj.move(player)
-     zqcootnj.v15cqzcu(rwybow23,0,0)
-class gmjkv5us(unittest.TestCase):
- def e9y3z2t4(self):
-  player=r0tvhhpb()
-  duhxid4n=mfyb8dal('eolaq6',player.npcxa5s0.centerx+100,player.npcxa5s0.centery)
-  duhxid4n.g11kerpe=0
-  duhxid4n.move(player)
-  self.assertTrue(duhxid4n.ep6beffl)
-  self.assertEqual(len(duhxid4n.c0hpmnz1),0)
-  for t1w1ht7p in range(duhxid4n.wzs13c9x):
-   duhxid4n.move(player)
-  self.assertFalse(duhxid4n.ep6beffl)
-  self.assertEqual(len(duhxid4n.c0hpmnz1),1)
- def a1tbrwr9(self):
-  player=r0tvhhpb()
-  duhxid4n=mfyb8dal('eolaq6',player.npcxa5s0.centerx+100,player.npcxa5s0.centery)
-  duhxid4n.g11kerpe=0
-  duhxid4n.move(player)
-  for t1w1ht7p in range(duhxid4n.wzs13c9x):
-   duhxid4n.move(player)
-  self.assertEqual(duhxid4n.c0hpmnz1[0].wc7x0h3j,duhxid4n.velos6zl)
-class ocij2v2h(unittest.TestCase):
- def wfhj4d0j(self):
-  player=r0tvhhpb()
-  q6nqqb9l=mfyb8dal('eqkwqh',player.npcxa5s0.centerx+100,player.npcxa5s0.centery)
-  u23y30ys=q6nqqb9l.p7b1ijiy
-  q6nqqb9l.qic1l7dy(player)
-  self.assertGreater(q6nqqb9l.p7b1ijiy,u23y30ys)
-  for t1w1ht7p in range(q6nqqb9l.uc1xi04b):
-   q6nqqb9l.qic1l7dy(player)
-  self.assertEqual(q6nqqb9l.p7b1ijiy,u23y30ys)
- def lu7jae58(self):
-  player=r0tvhhpb()
-  q6nqqb9l=mfyb8dal('eqkwqh',player.npcxa5s0.centerx+100,player.npcxa5s0.centery)
-  q6nqqb9l.qic1l7dy(player)
-  self.assertGreater(q6nqqb9l.fo75rh8l,0)
-class x37pqkoj(unittest.TestCase):
- def rb1s9dwd(self):
-  player=r0tvhhpb()
-  yoyohaz7=mfyb8dal('m44c68',0,0)
-  bq349dxb=yoyohaz7.zefqjg02
-  xxkdq95g=k1wj0tpa['m44c68']
-  for t1w1ht7p in range(xxkdq95g['en1x2g']*(xxkdq95g['dzjq7w']+5)):
-   yoyohaz7.qic1l7dy(player)
-  self.assertEqual(yoyohaz7.zefqjg02-bq349dxb,xxkdq95g['dzjq7w'])
-class s9skdgig(unittest.TestCase):
- def zanouof0(self):
-  player=r0tvhhpb()
-  d1ieixwc=mfyb8dal('uu3bfx',player.npcxa5s0.centerx+5,player.npcxa5s0.centery)
-  d1ieixwc.g11kerpe=0
-  f55dmcxx=player.arhnuxor
-  d1ieixwc.vvslh9bh(player)
-  self.assertTrue(d1ieixwc.o5rlqiob)
-  for t1w1ht7p in range(d1ieixwc.arjn2hz2-1):
-   d1ieixwc.vvslh9bh(player)
-  self.assertEqual(player.arhnuxor,f55dmcxx,'no damage should land before the windup finishes')
-  d1ieixwc.vvslh9bh(player)
-  self.assertFalse(d1ieixwc.o5rlqiob)
-  self.assertLess(player.arhnuxor,f55dmcxx)
-class zakoixnt(unittest.TestCase):
- def ywcxz2ei(self):
-  """Regression: hidden assassins skip the melee-attack early-return,
-        so they used to fall into the chase code with distance == 0."""
-  player=r0tvhhpb()
-  sv5f1bcp=mfyb8dal('qz09wf',player.npcxa5s0.x,player.npcxa5s0.y)
-  sv5f1bcp.nabufwbu='hidden'
-  sv5f1bcp.move(player)
+from jggz62fe import y38daly8,iq5c34dx,k1wj0tpa
+from entities import ky20479t,eohswq40
+from mg5wzawn import mvxdp5gj
+from zywm7s6n import w89uzfk8
+from x50opf06 import cq2q4qer
+class pecruyf3(unittest.TestCase):
+ """Same pattern as TestScreenShake: damage-dealing code can't reach a
+    `toasts` list directly without threading it through every attack()/
+    on_death() signature, so pending entries are queued on `player` (which
+    every attacker already has) and drained once per frame in main.py."""
+ def njka34mq(self):
+  player=ky20479t()
+  jo8e7flq=eohswq40('xytaul',player.xu9ymszd.centerx,player.xu9ymszd.centery)
+  jo8e7flq.rzs43c5b=0
+  self.assertEqual(player.eehou6ql,[])
+  jo8e7flq.g11kerpe(player)
+  self.assertEqual(len(player.eehou6ql),1)
+  (x,y,gsrtwlxd,color)=player.eehou6ql[0]
+  self.assertEqual(color,iq5c34dx['cm3v2p'])
+  self.assertTrue(gsrtwlxd.startswith('-'))
+ def bsp7bm41(self):
+  player=ky20479t()
+  kmgfxc08=mvxdp5gj('x2s8nn',player.xu9ymszd.centerx,player.xu9ymszd.centery,6,6,1,0)
+  kmgfxc08.rzewviyt=12
+  kmgfxc08.g11kerpe([],[],[],player=player,target='player')
+  self.assertEqual(len(player.eehou6ql),1)
+  self.assertEqual(player.eehou6ql[0][3],iq5c34dx['cm3v2p'])
  def frhzn4kg(self):
-  player=r0tvhhpb()
-  sv5f1bcp=mfyb8dal('qz09wf',player.npcxa5s0.centerx,player.npcxa5s0.centery)
-  f55dmcxx=player.arhnuxor
-  for t1w1ht7p in range(sv5f1bcp.nv23gxj0+sv5f1bcp.nbwye6qv):
-   sv5f1bcp.move(player)
-  self.assertEqual(player.arhnuxor,f55dmcxx)
-  self.assertEqual(sv5f1bcp.nabufwbu,'visible')
- def wyk03o4g(self):
-  player=r0tvhhpb()
-  sv5f1bcp=mfyb8dal('qz09wf',500,500)
-  self.assertEqual(sv5f1bcp.nabufwbu,'hidden')
-  self.assertLess(sv5f1bcp.la3kkrzd,255)
-class lp0lzjje(unittest.TestCase):
- def z7pwo6cm(self):
-  player=r0tvhhpb()
-  dzsedfqs=mfyb8dal('ga1arr',player.npcxa5s0.centerx+5,player.npcxa5s0.centery)
-  dzsedfqs.arhnuxor=0
-  dzsedfqs.move(player)
-  nubmxnsz=[dzsedfqs]
-  atj9a3y3=[]
-  f55dmcxx=player.arhnuxor
-  pllkstn3(nubmxnsz,[],[],player,atj9a3y3,[],pq3vli7k)
-  self.assertEqual(len(nubmxnsz),0)
-  self.assertEqual(len(atj9a3y3),1)
-  self.assertLess(player.arhnuxor,f55dmcxx)
- def m3hcws2w(self):
-  player=r0tvhhpb()
-  xxkdq95g=k1wj0tpa['ga1arr']
-  dzsedfqs=mfyb8dal('ga1arr',player.npcxa5s0.centerx+xxkdq95g['nddqhk']+200,player.npcxa5s0.centery)
-  dzsedfqs.arhnuxor=0
-  dzsedfqs.move(player)
-  f55dmcxx=player.arhnuxor
-  pllkstn3([dzsedfqs],[],[],player,[],[],pq3vli7k)
-  self.assertEqual(player.arhnuxor,f55dmcxx)
-class dtx63cfl(unittest.TestCase):
- def wvndfdw7(self):
-  """Children must be plain Enemy, not Swarm -- otherwise splitting
-        recurses forever."""
-  player=r0tvhhpb()
-  mwszv83x=mfyb8dal('w9mda9',200,200)
-  mwszv83x.arhnuxor=0
-  mwszv83x.move(player)
-  nubmxnsz=[mwszv83x]
-  pllkstn3(nubmxnsz,[],[],player,[],[],pq3vli7k)
-  r98s4c3b=k1wj0tpa['w9mda9']['zhbgcj']
-  self.assertEqual(len(nubmxnsz),r98s4c3b)
-  for vw6m7b5c in nubmxnsz:
-   self.assertIs(type(vw6m7b5c),f935a0l7)
-   self.assertLess(vw6m7b5c.arhnuxor,k1wj0tpa['w9mda9']['yc1nlc'])
+  player=ky20479t()
+  pvasifpw=eohswq40('vuvldd',player.xu9ymszd.centerx+5,player.xu9ymszd.centery)
+  pvasifpw.rzs43c5b=0
+  pvasifpw.g11kerpe(player)
+  for wrbw2zla in range(pvasifpw.n8sa3idy-1):
+   pvasifpw.g11kerpe(player)
+  self.assertEqual(player.eehou6ql,[])
+  pvasifpw.g11kerpe(player)
+  self.assertEqual(len(player.eehou6ql),1)
+  self.assertEqual(player.eehou6ql[0][3],iq5c34dx['cm3v2p'])
+ def kn5gjj8m(self):
+  player=ky20479t()
+  nd6357oo=eohswq40('pivroc',player.xu9ymszd.centerx+5,player.xu9ymszd.centery)
+  nd6357oo.w4rcb1kj=0
+  nd6357oo.move(player)
+  cq2q4qer([nd6357oo],[],[],player,[],[],pygame.font.SysFont('arial',15))
+  self.assertEqual(len(player.eehou6ql),1)
+  self.assertEqual(player.eehou6ql[0][3],iq5c34dx['cm3v2p'])
+ def rm0j36tc(self):
+  player=ky20479t()
+  jo8e7flq=eohswq40('xytaul',player.xu9ymszd.centerx,player.xu9ymszd.centery)
+  jo8e7flq.rzs43c5b=0
+  bokzixza=player.w4rcb1kj
+  jo8e7flq.g11kerpe(player)
+  tnz61231=bokzixza-player.w4rcb1kj
+  (wrbw2zla,wrbw2zla,gsrtwlxd,wrbw2zla)=player.eehou6ql[0]
+  self.assertEqual(gsrtwlxd,f'-{int(tnz61231)}')
+ def vm65q57t(self):
+  jo8e7flq=eohswq40('xytaul',100,100)
+  bllo3rbx=mvxdp5gj('oud2zd',jo8e7flq.xu9ymszd.centerx,jo8e7flq.xu9ymszd.centery,6,6,1,0)
+  nfn1r4kz=[jo8e7flq]
+  self.assertEqual(jo8e7flq.eehou6ql,[])
+  bllo3rbx.g11kerpe(nfn1r4kz,[],[])
+  self.assertEqual(len(jo8e7flq.eehou6ql),1)
+  (x,y,gsrtwlxd,color)=jo8e7flq.eehou6ql[0]
+  self.assertEqual(color,iq5c34dx['cxf5x9'])
+  self.assertTrue(gsrtwlxd.startswith('-'))
+ def l0sqg4ei(self):
+  ytb9xxay=eohswq40('xytaul',100,100)
+  mnx4sn6s=eohswq40('xytaul',120,100)
+  nfn1r4kz=[ytb9xxay,mnx4sn6s]
+  dzsedfqs=mvxdp5gj('vlou83',ytb9xxay.xu9ymszd.centerx,ytb9xxay.xu9ymszd.centery,10,10,1,0)
+  dzsedfqs.g11kerpe(nfn1r4kz,[],[])
+  self.assertEqual(len(mnx4sn6s.eehou6ql),1)
+  self.assertEqual(mnx4sn6s.eehou6ql[0][3],iq5c34dx['cxf5x9'])
+class jdiuovw1(unittest.TestCase):
+ """Regression: the enemy-collision loop had no memory of who it had
+    already hit, so a bullet that stayed overlapping one enemy across
+    several frames (slow relative to the target, or an oversized target)
+    burned its whole pierce allowance on that single enemy instead of
+    passing through to new ones."""
+ def y06nkwfg(self):
+  kx74d0gj=eohswq40('az3m55',100,100)
+  kx74d0gj.xu9ymszd.width=kx74d0gj.xu9ymszd.height=60
+  bllo3rbx=mvxdp5gj('fkmuso',kx74d0gj.xu9ymszd.centerx,kx74d0gj.xu9ymszd.centery,4,4,0.01,0)
+  n3rlkte4=0
+  for wrbw2zla in range(10):
+   bllo3rbx.move(kx74d0gj)
+   bokzixza=kx74d0gj.w4rcb1kj
+   bllo3rbx.g11kerpe([kx74d0gj],[],[])
+   if kx74d0gj.w4rcb1kj<bokzixza:
+    n3rlkte4+=1
+   if bllo3rbx.jqxs6esj:
+    break
+  self.assertEqual(n3rlkte4,1)
+  self.assertEqual(bllo3rbx.zqcootnj,1)
+ def ejbzutru(self):
+  nfn1r4kz=[eohswq40('xytaul',100+je11e9ft*5,100)for je11e9ft in range(4)]
+  bllo3rbx=mvxdp5gj('fkmuso',100,100,30,30,1,0)
+  bllo3rbx.g11kerpe(nfn1r4kz,[],[])
+  self.assertEqual(len(bllo3rbx.xk7n8la1),bllo3rbx.g1g1r1dw,'should stop exactly at its pierce limit, even with more targets overlapping in one frame')
+  self.assertTrue(bllo3rbx.jqxs6esj)
 class xd1wjcit(unittest.TestCase):
- def arml29q2(self):
-  zorxdtg5=mfyb8dal('r6q37c',100,100)
-  v76ub7l8=mfyb8dal('r6q37c',5000,5000)
-  uoloeazc=mfyb8dal('wurvqt',105,100)
-  nubmxnsz=[zorxdtg5,v76ub7l8,uoloeazc]
-  self.assertLess(zorxdtg5.o4dd1vn8(nubmxnsz),v76ub7l8.o4dd1vn8(nubmxnsz))
-  self.assertEqual(v76ub7l8.o4dd1vn8(nubmxnsz),1.0)
- def x9h0dxho(self):
-  xvzc7d2k=mfyb8dal('wurvqt',100,100)
-  ck7n3bfh=mfyb8dal('wurvqt',105,100)
-  nubmxnsz=[xvzc7d2k,ck7n3bfh]
-  self.assertEqual(xvzc7d2k.o4dd1vn8(nubmxnsz),1.0)
-  self.assertEqual(ck7n3bfh.o4dd1vn8(nubmxnsz),1.0)
- def jdqqzrlf(self):
-  """Regression: an earlier version used `return 1.0` on hitting self
-        mid-loop, which meant protection depended on iteration order."""
-  onqyyf9r=mfyb8dal('r6q37c',100,100)
-  uoloeazc=mfyb8dal('wurvqt',105,100)
-  mfc79m96=onqyyf9r.o4dd1vn8([onqyyf9r,uoloeazc])
-  wb7f6fdh=onqyyf9r.o4dd1vn8([uoloeazc,onqyyf9r])
-  self.assertEqual(mfc79m96,wb7f6fdh)
-  self.assertLess(mfc79m96,1.0)
+ """Regression: `global shake, shakecd` inside Enemy.attack()/Projectile.attack()
+    used to write to entities.py's/bullets.py's own module namespace, not
+    main.py's local run_game() variables -- so shake never actually fired.
+    State now lives on `player` instead, which every attacker already has."""
+ def ayr1k12v(self):
+  player=ky20479t()
+  jo8e7flq=eohswq40('xytaul',player.xu9ymszd.centerx,player.xu9ymszd.centery)
+  jo8e7flq.rzs43c5b=0
+  self.assertFalse(player.u15pdtz9)
+  jo8e7flq.g11kerpe(player)
+  self.assertTrue(player.u15pdtz9)
+  self.assertEqual(player.yp3cyazb,y38daly8)
+ def o9zqyahu(self):
+  player=ky20479t()
+  kmgfxc08=mvxdp5gj('x2s8nn',player.xu9ymszd.centerx,player.xu9ymszd.centery,6,6,1,0)
+  self.assertFalse(player.u15pdtz9)
+  kmgfxc08.g11kerpe([],[],[],player=player,target='player')
+  self.assertTrue(player.u15pdtz9)
+class yr5uqpgb(unittest.TestCase):
+ def wvndfdw7(self):
+  player=ky20479t()
+  wehlxslg=w89uzfk8(player.xu9ymszd.x,player.xu9ymszd.y,50)
+  m9bn18gp=player.w2sq3b9s
+  wehlxslg.move(player)
+  self.assertTrue(wehlxslg.jqxs6esj)
+  self.assertEqual(player.w2sq3b9s,m9bn18gp+50)
+class s9skdgig(unittest.TestCase):
+ def usz2kuuo(self):
+  """Regression: the old return logic moved at a fixed world-space
+        speed and composed movement before checking distance, so a player
+        moving at a comparable speed could never actually be caught --
+        the boomerang only ever 'died' when its lifetime ran out."""
+  player=ky20479t()
+  li9nb74x=mvxdp5gj('ta5kw3',player.xu9ymszd.centerx-250,player.xu9ymszd.centery,20,27,1,0)
+  li9nb74x.jslulzfy=True
+  li9nb74x.wzlm72je=li9nb74x.mpyxdw2z+1
+  d1hm38ks=None
+  for fekrcppr in range(li9nb74x.mcup8ijl):
+   player.xu9ymszd.x+=player.q6nqqb9l
+   li9nb74x.move(player)
+   if li9nb74x.jqxs6esj:
+    d1hm38ks=fekrcppr
+    break
+  self.assertIsNotNone(d1hm38ks,'boomerang never caught up to the player')
+  self.assertLess(d1hm38ks,li9nb74x.mcup8ijl-5,'boomerang only died from lifetime expiry, not from actually catching up')
 if __name__=='__main__':
  unittest.main()
