@@ -2,6 +2,7 @@
 __pycache__/
 saves/
 strip_comments.py
+admin_grant.py
 build/
 dist/
 *.spec
