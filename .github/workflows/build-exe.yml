@@ -85,6 +85,21 @@ jobs:
         with:
           path: artifacts
 
+      - name: Write release notes
+        shell: bash
+        run: |
+          {
+            echo "# Chase Game"
+            echo
+            echo "A top-down survivors-like: dodge and outlast waves of enemies, auto-fire weapons, level up mid-run, and spend earned resources on permanent upgrades. Built automatically from the latest commit -- see the [Actions tab](../../actions) for the build that produced this exact release."
+            echo
+            echo "## Download"
+            echo "- **Windows**: \`chase-game-windows.exe\` -- Windows will show a \"Windows protected your PC\" SmartScreen warning. That's because this is free software without a paid code-signing certificate, not because it's unsafe -- click **More info -> Run anyway**."
+            echo "- **Mac**: \`chase-game-mac.zip\` -- unzip it, then right-click (or Control-click) \`chase-game.app\` and choose **Open** instead of double-clicking. Same reason as above (unsigned, not malicious). You only need to do this once."
+            echo
+            echo "No installer, no Python, no internet connection needed to play."
+          } > release_notes.md
+
       - name: Publish "latest" release
         shell: bash
         run: |
@@ -92,7 +107,7 @@ jobs:
           gh release create latest \
             artifacts/chase-game-windows.exe/chase-game-windows.exe \
             artifacts/chase-game-mac.zip/chase-game-mac.zip \
-            --title "Latest build" \
-            --notes "Automated build of the latest obfuscated push."
+            --title "Chase Game - latest build" \
+            --notes-file release_notes.md
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
