@@ -6,8 +6,9 @@ Homebase.
 
 ## Download and play (no Python needed)
 
-Every push builds fresh Windows and Mac executables and publishes them to the
-[latest release](../../releases/tag/latest):
+Every push builds fresh Windows and Mac executables and publishes them as a new
+[GitHub release](../../releases/latest), and also to
+[itch.io](https://coder5330.itch.io/chase-game):
 
 - **Windows**: download `chase-game-windows.exe` and double-click it.
 - **Mac**: download `chase-game-mac.zip`, unzip it, and double-click

@@ -115,14 +115,13 @@ jobs:
             echo "No installer, no Python, no internet connection needed to play."
           } > release_notes.md
 
-      - name: Publish "latest" release
+      - name: Publish a new release
         shell: bash
         run: |
-          gh release delete latest --yes --cleanup-tag || true
-          gh release create latest \
+          gh release create "build-${{ github.run_number }}" \
             artifacts/chase-game-windows.exe/chase-game-windows.exe \
             artifacts/chase-game-mac.zip/chase-game-mac.zip \
-            --title "Chase Game - latest build" \
+            --title "Chase Game - build ${{ github.run_number }}" \
             --notes-file release_notes.md
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
